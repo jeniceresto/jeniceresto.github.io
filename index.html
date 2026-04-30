@@ -6,8 +6,31 @@
 <title>Jenice Resto | Media Kit</title>
 
 <style>
-body{margin:0;font-family:Arial, sans-serif;background:#ffffff;color:#222;transition:0.3s;}
-header{text-align:center;padding:40px 20px;}
+body{margin:0;font-family:Arial, sans-serif;background:#ffffff;color:#222;transition:0.3s;scroll-behavior:smooth;}
+
+/* MENU SUPERIOR */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#ffffffee;
+    backdrop-filter:blur(10px);
+    padding:10px 0;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    border-bottom:1px solid #eee;
+    z-index:999;
+}
+nav a{
+    color:#0077cc;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+}
+
+/* HEADER */
+header{text-align:center;padding:120px 20px 40px;}
 .logo{width:140px;margin:auto;display:block;}
 .hero-img{width:180px;height:180px;border-radius:50%;object-fit:cover;margin-top:20px;box-shadow:0 4px 20px rgba(0,0,0,0.15);}
 h1{font-size:36px;margin:15px 0 5px;color:#1a1a1a;}
@@ -15,14 +38,18 @@ h1{font-size:36px;margin:15px 0 5px;color:#1a1a1a;}
 .lang-switch{margin-top:15px;}
 .lang-btn{padding:8px 18px;border-radius:30px;border:1px solid #0077cc;background:#fff;color:#0077cc;font-size:14px;margin:0 5px;cursor:pointer;transition:0.3s;}
 .lang-btn.active{background:#0077cc;color:#fff;}
+
+/* SECCIONES */
 section{padding:40px 20px;max-width:900px;margin:auto;}
 h2{font-size:28px;margin-bottom:10px;color:#1a1a1a;text-align:center;}
 .dual{display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;}
 .dual div{flex:1;min-width:260px;}
 .package-box,.stats-box{background:#f7f7f7;padding:15px;border-radius:10px;margin-bottom:15px;}
 .reels iframe{width:100%;height:450px;border:none;border-radius:10px;margin-bottom:25px;}
+
+/* FOOTER */
 footer{text-align:center;background:#1a1a1a;color:#fff;padding:30px 20px;margin-top:40px;}
-a{color:#0077cc;text-decoration:none;}
+footer a{color:#4da3ff;text-decoration:none;}
 </style>
 
 <script>
@@ -39,6 +66,15 @@ function setLang(lang){
 
 <body onload="setLang('es')">
 
+<!-- MENU SUPERIOR -->
+<nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#estadisticas">Estadísticas</a>
+    <a href="#trabajos">Trabajos</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#paquetes">Paquetes</a>
+</nav>
+
 <header>
     <img src="IMG_5775.png" class="logo">
     <img src="IMG_8980.jpeg" class="hero-img">
@@ -51,7 +87,8 @@ function setLang(lang){
     </div>
 </header>
 
-<section>
+<!-- SOBRE MÍ -->
+<section id="sobre-mi">
 <h2 data-es="Sobre Mí" data-en="About Me"></h2>
 <div class="dual">
 <div data-es="<p>Soy Jenice Resto, creadora de contenido especializada en travel & lifestyle para el mercado hispano en Puerto Rico, LATAM y Estados Unidos. Mi enfoque combina estética minimalista, storytelling auténtico y contenido estratégico diseñado para inspirar, conectar y generar resultados reales para las marcas.</p>"
@@ -59,7 +96,25 @@ function setLang(lang){
 </div>
 </section>
 
-<section>
+<!-- ESTADÍSTICAS -->
+<section id="estadisticas">
+<h2 data-es="Estadísticas" data-en="Analytics"></h2>
+<div class="stats-box" data-es="<p><strong>Alcance mensual:</strong> 500K visualizaciones</p><p><strong>Seguidores:</strong> 23.6K</p><p><strong>Edad principal:</strong> 25–34 años</p><p><strong>Género:</strong> 69.9% mujeres · 30.1% hombres</p><p><strong>Países principales:</strong> LATAM y Estados Unidos</p>"
+     data-en="<p><strong>Monthly reach:</strong> 500K views</p><p><strong>Followers:</strong> 23.6K</p><p><strong>Main age:</strong> 25–34 years</p><p><strong>Gender:</strong> 69.9% women · 30.1% men</p><p><strong>Top countries:</strong> LATAM & USA</p>"></div>
+</section>
+
+<!-- TRABAJOS RECIENTES -->
+<section id="trabajos">
+<h2 data-es="Trabajos Recientes" data-en="Recent Work"></h2>
+<div class="reels">
+<iframe src="https://www.instagram.com/reel/DXferAykeNH/embed" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DSbCaoKkddQ/embed" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DPBrAD1jb6f/embed" allowfullscreen></iframe>
+</div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
 <h2 data-es="Servicios" data-en="Services"></h2>
 <div class="dual">
 <div data-es="<ul><li>Creación de contenido para Instagram y TikTok</li><li>Contenido UGC profesional</li><li>Promoción de hoteles, restaurantes y experiencias</li><li>Modelaje y presencia en cámara</li><li>Cobertura de eventos</li><li>Reseñas de productos y servicios</li></ul>"
@@ -67,7 +122,8 @@ function setLang(lang){
 </div>
 </section>
 
-<section>
+<!-- PAQUETES -->
+<section id="paquetes">
 <h2 data-es="Paquetes" data-en="Packages"></h2>
 <div class="dual">
 <div class="package-box" data-es="<h3>Instagram Post (10 fotos)</h3><p>$200</p>"
@@ -84,40 +140,23 @@ function setLang(lang){
 </div>
 </section>
 
-<section>
-<h2 data-es="Estadísticas" data-en="Analytics"></h2>
-<div class="stats-box" data-es="<p><strong>Alcance mensual:</strong> 500K visualizaciones</p><p><strong>Seguidores:</strong> 23.6K</p><p><strong>Edad principal:</strong> 25–34 años</p><p><strong>Género:</strong> 69.9% mujeres · 30.1% hombres</p><p><strong>Países principales:</strong> LATAM y Estados Unidos</p>"
-     data-en="<p><strong>Monthly reach:</strong> 500K views</p><p><strong>Followers:</strong> 23.6K</p><p><strong>Main age:</strong> 25–34 years</p><p><strong>Gender:</strong> 69.9% women · 30.1% men</p><p><strong>Top countries:</strong> LATAM & USA</p>"></div>
-</section>
-
-<section>
-<h2 data-es="Trabajos Recientes" data-en="Recent Work"></h2>
-<div class="reels">
-<iframe src="https://www.instagram.com/reel/DXferAykeNH/embed" allowfullscreen></iframe>
-<iframe src="https://www.instagram.com/reel/DSbCaoKkddQ/embed" allowfullscreen></iframe>
-<iframe src="https://www.instagram.com/reel/DPBrAD1jb6f/embed" allowfullscreen></iframe>
-</div>
-</section>
-
+<!-- FOOTER -->
 <footer>
 <h2 data-es="Contacto" data-en="Contact"></h2>
 
-<p>
-    📩 Email: 
+<p>📩 Email: 
     <a href="mailto:jeniceresto.collabs@gmail.com">
         jeniceresto.collabs@gmail.com
     </a>
 </p>
 
-<p>
-    📸 Instagram: 
+<p>📸 Instagram: 
     <a href="https://instagram.com/jeniceresto">
         @jeniceresto
     </a>
 </p>
 
-<p>
-    🎵 TikTok: 
+<p>🎵 TikTok: 
     <a href="https://tiktok.com/@jeniceresto">
         @jeniceresto
     </a>
@@ -126,5 +165,5 @@ function setLang(lang){
 <p>📱 Phone: 787-239-5768</p>
 </footer>
 
-
-
+</body>
+</html>
