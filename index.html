@@ -112,31 +112,53 @@ h2{
     margin-bottom:15px;
 }
 
-/* CONTENEDOR DE VIDEOS (ARREGLADO) */
+/* CONTENEDOR DE VIDEOS */
 .reels{
     display:flex;
     flex-direction:column;
-    gap:20px;
+    gap:30px;
 }
 
 .reel-box{
     width:100%;
-    height:300px; /* MÁS PEQUEÑO */
-    overflow:hidden; /* EVITA SCROLL PEGADO */
+    height:500px;
+    overflow:hidden;
     border-radius:12px;
     position:relative;
+    touch-action: pan-y;
 }
 
 .reel-box iframe{
     width:100%;
     height:100%;
     border:none;
-    pointer-events:none; /* NO ATRAPA EL SCROLL */
+    pointer-events:auto;
 }
 
 /* COLORES ALTERNADOS */
 .bg-blue{
     background:#eaf5ff;
+}
+
+/* GRID DE MARCAS */
+.brand-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap:25px;
+    align-items:center;
+    justify-items:center;
+    margin-top:20px;
+}
+
+.brand-grid img{
+    width:120px;
+    height:auto;
+    object-fit:contain;
+    transition:0.3s;
+}
+
+.brand-grid img:hover{
+    transform:scale(1.05);
 }
 
 /* FOOTER */
@@ -171,6 +193,7 @@ function setLang(lang){
 <nav>
     <a href="#sobre-mi">Sobre mí</a>
     <a href="#estadisticas">Estadísticas</a>
+    <a href="#marcas">Marcas</a>
     <a href="#trabajos">Trabajos</a>
     <a href="#servicios">Servicios</a>
     <a href="#paquetes">Paquetes</a>
@@ -202,6 +225,23 @@ function setLang(lang){
 <h2 data-es="Estadísticas" data-en="Analytics"></h2>
 <div class="stats-box" data-es="<p><strong>Alcance mensual:</strong> 500K visualizaciones</p><p><strong>Seguidores:</strong> 23.6K</p><p><strong>Edad principal:</strong> 25–34 años</p><p><strong>Género:</strong> 69.9% mujeres · 30.1% hombres</p><p><strong>Países principales:</strong> LATAM y Estados Unidos</p>"
      data-en="<p><strong>Monthly reach:</strong> 500K views</p><p><strong>Followers:</strong> 23.6K</p><p><strong>Main age:</strong> 25–34 years</p><p><strong>Gender:</strong> 69.9% women · 30.1% men</p><p><strong>Top countries:</strong> LATAM & USA</p>"></div>
+</section>
+
+<!-- MARCAS -->
+<section id="marcas">
+<h2 data-es="Marcas con las que he trabajado" data-en="Brands I've Worked With"></h2>
+
+<p style="text-align:center; font-size:18px; margin-bottom:25px;"
+   data-es="Más de 300 colaboraciones con marcas locales e internacionales."
+   data-en="Over 300 collaborations with local and international brands.">
+</p>
+
+<div class="brand-grid">
+    <img src="OceanSpray.png" alt="Ocean Spray">
+    <img src="LittleCaesars.png" alt="Little Caesars">
+    <img src="Airbnb.png" alt="Airbnb">
+    <img src="Popeyes.png" alt="Popeyes">
+</div>
 </section>
 
 <!-- TRABAJOS RECIENTES -->
