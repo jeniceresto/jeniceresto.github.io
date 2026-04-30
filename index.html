@@ -112,13 +112,26 @@ h2{
     margin-bottom:15px;
 }
 
-/* VIDEOS */
-.reels iframe{
+/* CONTENEDOR DE VIDEOS (ARREGLADO) */
+.reels{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.reel-box{
     width:100%;
-    height:350px;
+    height:300px; /* MÁS PEQUEÑO */
+    overflow:hidden; /* EVITA SCROLL PEGADO */
+    border-radius:12px;
+    position:relative;
+}
+
+.reel-box iframe{
+    width:100%;
+    height:100%;
     border:none;
-    border-radius:10px;
-    margin-bottom:25px;
+    pointer-events:none; /* NO ATRAPA EL SCROLL */
 }
 
 /* COLORES ALTERNADOS */
@@ -194,10 +207,21 @@ function setLang(lang){
 <!-- TRABAJOS RECIENTES -->
 <section id="trabajos">
 <h2 data-es="Trabajos Recientes" data-en="Recent Work"></h2>
+
 <div class="reels">
+
+<div class="reel-box">
 <iframe src="https://www.instagram.com/reel/DXferAykeNH/embed" allowfullscreen></iframe>
+</div>
+
+<div class="reel-box">
 <iframe src="https://www.instagram.com/reel/DSbCaoKkddQ/embed" allowfullscreen></iframe>
+</div>
+
+<div class="reel-box">
 <iframe src="https://www.instagram.com/reel/DPBrAD1jb6f/embed" allowfullscreen></iframe>
+</div>
+
 </div>
 </section>
 
