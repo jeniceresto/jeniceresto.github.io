@@ -1,175 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jenice Resto | Media Kit</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #ffffff;
-            color: #222;
-        }
-        header {
-            background: #cfe8ff;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 40px;
-            margin: 0;
-            color: #1a1a1a;
-        }
-        header p {
-            font-size: 18px;
-            max-width: 700px;
-            margin: 10px auto 0;
-        }
-        section {
-            padding: 50px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-        h2 {
-            font-size: 32px;
-            margin-bottom: 10px;
-            color: #1a1a1a;
-        }
-        .dual {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .dual div {
-            flex: 1;
-            min-width: 280px;
-        }
-        .stats-box, .package-box {
-            background: #f7f7f7;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-        .reels iframe {
-            width: 100%;
-            height: 500px;
-            border: none;
-            margin-bottom: 30px;
-            border-radius: 10px;
-        }
-        footer {
-            background: #1a1a1a;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        a {
-            color: #0077cc;
-            text-decoration: none;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jenice Resto | Media Kit</title>
+
+<style>
+body{margin:0;font-family:Arial, sans-serif;background:#ffffff;color:#222;transition:0.3s;}
+header{text-align:center;padding:40px 20px;}
+.logo{width:140px;margin:auto;display:block;}
+.hero-img{width:180px;height:180px;border-radius:50%;object-fit:cover;margin-top:20px;box-shadow:0 4px 20px rgba(0,0,0,0.15);}
+h1{font-size:36px;margin:15px 0 5px;color:#1a1a1a;}
+.tagline{font-size:16px;color:#555;margin-bottom:20px;}
+.lang-switch{margin-top:15px;}
+.lang-btn{padding:8px 18px;border-radius:30px;border:1px solid #0077cc;background:#fff;color:#0077cc;font-size:14px;margin:0 5px;cursor:pointer;transition:0.3s;}
+.lang-btn.active{background:#0077cc;color:#fff;}
+section{padding:40px 20px;max-width:900px;margin:auto;}
+h2{font-size:28px;margin-bottom:10px;color:#1a1a1a;text-align:center;}
+.dual{display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;}
+.dual div{flex:1;min-width:260px;}
+.package-box,.stats-box{background:#f7f7f7;padding:15px;border-radius:10px;margin-bottom:15px;}
+.reels iframe{width:100%;height:450px;border:none;border-radius:10px;margin-bottom:25px;}
+footer{text-align:center;background:#1a1a1a;color:#fff;padding:30px 20px;margin-top:40px;}
+a{color:#0077cc;text-decoration:none;}
+</style>
+
+<script>
+function setLang(lang){
+    document.querySelectorAll("[data-es]").forEach(el=>{
+        el.innerHTML = lang==="es" ? el.dataset.es : el.dataset.en;
+    });
+    document.getElementById("btn-es").classList.toggle("active", lang==="es");
+    document.getElementById("btn-en").classList.toggle("active", lang==="en");
+}
+</script>
+
 </head>
 
-<body>
+<body onload="setLang('es')">
 
 <header>
-    <h1>Jenice Resto</h1>
-    <p>Travel & Lifestyle Content Creator | Puerto Rico · LATAM · USA</p>
+    <img src="IMG_5775.png" class="logo">
+    <img src="IMG_8980.jpeg" class="hero-img">
+    <h1 data-es="Jenice Resto" data-en="Jenice Resto"></h1>
+    <p class="tagline" data-es="Travel & Lifestyle Content Creator" data-en="Travel & Lifestyle Content Creator"></p>
+
+    <div class="lang-switch">
+        <button id="btn-es" class="lang-btn" onclick="setLang('es')">ES</button>
+        <button id="btn-en" class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
 </header>
 
 <section>
-    <h2>About Me / Sobre Mí</h2>
-    <div class="dual">
-        <div>
-            <h3>ESPAÑOL</h3>
-            <p>Soy Jenice Resto, creadora de contenido especializada en travel & lifestyle para el mercado hispano en Puerto Rico, LATAM y Estados Unidos. Mi enfoque combina estética minimalista, storytelling auténtico y contenido estratégico diseñado para inspirar, conectar y generar resultados reales para las marcas.</p>
-        </div>
-        <div>
-            <h3>ENGLISH</h3>
-            <p>I’m Jenice Resto, a travel & lifestyle content creator focused on the Hispanic market across Puerto Rico, LATAM, and the United States. My work blends minimal aesthetics, authentic storytelling, and strategic content designed to inspire, connect, and deliver real results for brands.</p>
-        </div>
-    </div>
+<h2 data-es="Sobre Mí" data-en="About Me"></h2>
+<div class="dual">
+<div data-es="<h3>ESPAÑOL</h3><p>Soy Jenice Resto, creadora de contenido especializada en travel & lifestyle para el mercado hispano en Puerto Rico, LATAM y Estados Unidos. Mi enfoque combina estética minimalista, storytelling auténtico y contenido estratégico diseñado para inspirar, conectar y generar resultados reales para las marcas.</p>"
+     data-en="<h3>ENGLISH</h3><p>I’m Jenice Resto, a travel & lifestyle content creator focused on the Hispanic market across Puerto Rico, LATAM, and the United States. My work blends minimal aesthetics, authentic storytelling, and strategic content designed to inspire, connect, and deliver real results for brands.</p>"></div>
+</div>
 </section>
 
 <section>
-    <h2>Services / Servicios</h2>
-    <div class="dual">
-        <div>
-            <h3>ESPAÑOL</h3>
-            <ul>
-                <li>Creación de contenido para Instagram y TikTok</li>
-                <li>Contenido UGC profesional</li>
-                <li>Promoción de hoteles, restaurantes y experiencias</li>
-                <li>Modelaje y presencia en cámara</li>
-                <li>Cobertura de eventos</li>
-                <li>Reseñas de productos y servicios</li>
-            </ul>
-        </div>
-        <div>
-            <h3>ENGLISH</h3>
-            <ul>
-                <li>Instagram & TikTok content creation</li>
-                <li>Professional UGC content</li>
-                <li>Hotel, restaurant & experience promotion</li>
-                <li>Modeling and on‑camera presence</li>
-                <li>Event coverage</li>
-                <li>Product and service reviews</li>
-            </ul>
-        </div>
-    </div>
+<h2 data-es="Servicios" data-en="Services"></h2>
+<div class="dual">
+<div data-es="<h3>ESPAÑOL</h3><ul><li>Creación de contenido para Instagram y TikTok</li><li>Contenido UGC profesional</li><li>Promoción de hoteles, restaurantes y experiencias</li><li>Modelaje y presencia en cámara</li><li>Cobertura de eventos</li><li>Reseñas de productos y servicios</li></ul>"
+     data-en="<h3>ENGLISH</h3><ul><li>Instagram & TikTok content creation</li><li>Professional UGC content</li><li>Hotel, restaurant & experience promotion</li><li>Modeling and on‑camera presence</li><li>Event coverage</li><li>Product and service reviews</li></ul>"></div>
+</div>
 </section>
 
 <section>
-    <h2>Packages / Paquetes</h2>
-    <div class="dual">
-        <div class="package-box">
-            <h3>Instagram Post (10 photos)</h3>
-            <p>$200</p>
-        </div>
-        <div class="package-box">
-            <h3>Instagram Reel + TikTok Video</h3>
-            <p>$350</p>
-        </div>
-        <div class="package-box">
-            <h3>All‑Inclusive Package</h3>
-            <p>$450</p>
-            <p>Stories, exclusive portfolio photos & videos, Reel, Instagram Post</p>
-        </div>
-        <div class="package-box">
-            <h3>On‑Camera Talent (No posting)</h3>
-            <p>$250 · Hasta 3 horas</p>
-        </div>
-    </div>
+<h2 data-es="Paquetes" data-en="Packages"></h2>
+<div class="dual">
+<div class="package-box" data-es="<h3>Instagram Post (10 fotos)</h3><p>$200</p>"
+     data-en="<h3>Instagram Post (10 photos)</h3><p>$200</p>"></div>
+
+<div class="package-box" data-es="<h3>Instagram Reel + TikTok Video</h3><p>$350</p>"
+     data-en="<h3>Instagram Reel + TikTok Video</h3><p>$350</p>"></div>
+
+<div class="package-box" data-es="<h3>Paquete Completo</h3><p>$450</p><p>Stories, fotos y videos exclusivos, Reel y Post</p>"
+     data-en="<h3>All‑Inclusive Package</h3><p>$450</p><p>Stories, exclusive photos & videos, Reel & Post</p>"></div>
+
+<div class="package-box" data-es="<h3>On‑Camera Talent (Sin publicación)</h3><p>$250 · Hasta 3 horas</p>"
+     data-en="<h3>On‑Camera Talent (No posting)</h3><p>$250 · Up to 3 hours</p>"></div>
+</div>
 </section>
 
 <section>
-    <h2>Analytics / Estadísticas</h2>
-    <div class="stats-box">
-        <p><strong>Alcance mensual:</strong> 500K visualizaciones</p>
-        <p><strong>Seguidores:</strong> 23.6K</p>
-        <p><strong>Edad principal:</strong> 25–34 años</p>
-        <p><strong>Género:</strong> 69.9% mujeres · 30.1% hombres</p>
-        <p><strong>Países principales:</strong> LATAM y Estados Unidos</p>
-    </div>
+<h2 data-es="Estadísticas" data-en="Analytics"></h2>
+<div class="stats-box" data-es="<p><strong>Alcance mensual:</strong> 500K visualizaciones</p><p><strong>Seguidores:</strong> 23.6K</p><p><strong>Edad principal:</strong> 25–34 años</p><p><strong>Género:</strong> 69.9% mujeres · 30.1% hombres</p><p><strong>Países principales:</strong> LATAM y Estados Unidos</p>"
+     data-en="<p><strong>Monthly reach:</strong> 500K views</p><p><strong>Followers:</strong> 23.6K</p><p><strong>Main age:</strong> 25–34 years</p><p><strong>Gender:</strong> 69.9% women · 30.1% men</p><p><strong>Top countries:</strong> LATAM & USA</p>"></div>
 </section>
 
 <section>
-    <h2>Recent Work / Trabajos Recientes</h2>
-    <p>Here is a selection of my latest work, featuring collaborations with hotels, restaurants, boutiques, and tourism experiences.</p>
-
-    <div class="reels">
-        <iframe src="https://www.instagram.com/reel/DXferAykeNH/embed" allowfullscreen></iframe>
-        <iframe src="https://www.instagram.com/reel/DSbCaoKkddQ/embed" allowfullscreen></iframe>
-        <iframe src="https://www.instagram.com/reel/DPBrAD1jb6f/embed" allowfullscreen></iframe>
-    </div>
+<h2 data-es="Trabajos Recientes" data-en="Recent Work"></h2>
+<div class="reels">
+<iframe src="https://www.instagram.com/reel/DXferAykeNH/embed" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DSbCaoKkddQ/embed" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/reel/DPBrAD1jb6f/embed" allowfullscreen></iframe>
+</div>
 </section>
 
 <footer>
-    <h2>Contact / Contacto</h2>
-    <p>Email: <a href="mailto:restojenice@gmail.com">restojenice@gmail.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/jeniceresto">@jeniceresto</a></p>
-    <p>Phone: 787-239-5768</p>
+<h2 data-es="Contacto" data-en="Contact"></h2>
+<p>Email: <a href="mailto:restojenice@gmail.com">restojenice@gmail.com</a></p>
+<p>Instagram: <a href="https://instagram.com/jeniceresto">@jeniceresto</a></p>
+<p>Phone: 787-239-5768</p>
 </footer>
 
 </body>
