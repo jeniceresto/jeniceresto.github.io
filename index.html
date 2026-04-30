@@ -1,612 +1,176 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Jenice Resto | Creadora de Contenido</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Creadora de contenido de travel y lifestyle. Colaboraciones con marcas que quieren destacar experiencias auténticas." />
-  <style>
-    :root {
-      --primary: #6ec6ff;   /* Celeste del logo (ajustable) */
-      --accent: #ffd54a;    /* Amarillo del logo (ajustable) */
-      --bg: #ffffff;
-      --text: #111111;
-      --muted: #666666;
-      --border: #e5e5e5;
-      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: var(--font-main);
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px 20px 60px;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 40px;
-    }
-
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-circle {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      border: 2px solid var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 18px;
-      color: var(--primary);
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .brand-text span:first-child {
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      font-size: 11px;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .brand-text span:last-child {
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    .cta-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .cta-header a {
-      padding: 8px 16px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      font-size: 13px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .cta-header a.primary {
-      background: var(--primary);
-      border-color: var(--primary);
-      color: #fff;
-      font-weight: 600;
-    }
-
-    .tag {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 32px;
-      align-items: center;
-      margin-bottom: 56px;
-    }
-
-    .hero-title {
-      font-size: 32px;
-      line-height: 1.15;
-      margin-bottom: 12px;
-    }
-
-    .hero-title span {
-      color: var(--primary);
-    }
-
-    .hero-sub {
-      font-size: 15px;
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 20px;
-    }
-
-    .badge {
-      font-size: 11px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: #fafafa;
-    }
-
-    .metrics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin-bottom: 24px;
-    }
-
-    .metric {
-      min-width: 110px;
-    }
-
-    .metric strong {
-      display: block;
-      font-size: 20px;
-      margin-bottom: 2px;
-    }
-
-    .metric span {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .btn {
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      font-size: 13px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      border-color: var(--accent);
-      font-weight: 600;
-    }
-
-    .btn-outline {
-      background: #fff;
-    }
-
-    .hero-photo {
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-    }
-
-    .section {
-      margin-bottom: 52px;
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-
-    .section-title {
-      font-size: 18px;
-      font-weight: 600;
-    }
-
-    .section-sub {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .about-text {
-      font-size: 14px;
-      color: var(--muted);
-      max-width: 640px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      padding: 18px 16px;
-      background: #fff;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .card h3 {
-      font-size: 15px;
-      margin-bottom: 2px;
-    }
-
-    .price {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .price span {
-      font-size: 11px;
-      font-weight: 400;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-left: 4px;
-    }
-
-    .card ul {
-      list-style: none;
-      font-size: 13px;
-      color: var(--muted);
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      margin-top: 4px;
-    }
-
-    .card ul li::before {
-      content: "• ";
-      color: var(--primary);
-    }
-
-    .card-footer {
-      margin-top: auto;
-      font-size: 11px;
-      color: var(--muted);
-    }
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .portfolio-item {
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      background: #f7f7f7;
-      min-height: 140px;
-      display: flex;
-      align-items: stretch;
-      justify-content: stretch;
-    }
-
-    .portfolio-caption {
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 6px;
-    }
-
-    .contact-box {
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      padding: 20px 18px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .contact-text {
-      font-size: 14px;
-      color: var(--muted);
-      max-width: 520px;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 11px;
-      color: var(--muted);
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-      border-top: 1px solid var(--border);
-      padding-top: 16px;
-    }
-
-    footer a {
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-    }
-
-    @media (max-width: 800px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .services-grid,
-      .portfolio-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .cta-header {
-        justify-content: flex-start;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenice Resto | Media Kit</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #222;
+        }
+        header {
+            background: #cfe8ff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 40px;
+            margin: 0;
+            color: #1a1a1a;
+        }
+        header p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 10px auto 0;
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        .dual {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .dual div {
+            flex: 1;
+            min-width: 280px;
+        }
+        .stats-box, .package-box {
+            background: #f7f7f7;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .reels iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="page">
-    <!-- HEADER -->
-    <header>
-      <div class="logo-wrap">
-        <!-- EDITA ESTE BLOQUE SI QUIERES REEMPLAZAR POR TU LOGO EN IMAGEN -->
-        <div class="logo-circle">J</div>
-        <div class="brand-text">
-          <span>Jenice Resto</span>
-          <span>@jeniceresto</span>
-        </div>
-      </div>
-      <div class="cta-header">
-        <a href="https://www.instagram.com/jeniceresto" target="_blank" rel="noopener noreferrer">
-          Instagram
-        </a>
-        <!-- EDITA EL ENLACE DE CONTACTO (WHATSAPP O EMAIL) -->
-        <a href="mailto:colaboraciones@jeniceresto.com?subject=Colaboración%20con%20Jenice%20Resto" class="primary">
-          Contacto marcas
-        </a>
-      </div>
-    </header>
 
-    <!-- HERO -->
-    <section class="hero" id="inicio">
-      <div>
-        <div class="tag">Creadora de contenido · Travel & Lifestyle</div>
-        <h1 class="hero-title">
-          Contenido auténtico que hace que tus experiencias
-          <span>den ganas de reservar.</span>
-        </h1>
-        <p class="hero-sub">
-          Soy Jenice, creadora de contenido enfocada en aventura, viajes y lifestyle.  
-          Me apasiona capturar la belleza de cada lugar y convertirla en contenido que inspira a otros a descubrir Puerto Rico y el mundo.
-        </p>
+<header>
+    <h1>Jenice Resto</h1>
+    <p>Travel & Lifestyle Content Creator | Puerto Rico · LATAM · USA</p>
+</header>
 
-        <div class="hero-badges">
-          <span class="badge">Travel & Lifestyle</span>
-          <span class="badge">Experiencias en Puerto Rico</span>
-          <span class="badge">Contenido para marcas</span>
-          <span class="badge">Colaboración con Ocean Spray</span>
-        </div>
-
-        <!-- MÉTRICAS – EDITA LOS NÚMEROS AQUÍ -->
-        <div class="metrics">
-          <div class="metric">
-            <strong>XXk+</strong>
-            <span>seguidores</span>
-          </div>
-          <div class="metric">
-            <strong>X.X%</strong>
-            <span>engagement</span>
-          </div>
-          <div class="metric">
-            <strong>PR & Intl</strong>
-            <span>audiencia</span>
-          </div>
-        </div>
-
-        <div class="hero-actions">
-          <!-- EDITA A WHATSAPP SI PREFIERES -->
-          <a href="mailto:colaboraciones@jeniceresto.com?subject=Colaboración%20con%20Jenice%20Resto" class="btn btn-primary">
-            Enviar propuesta
-          </a>
-          <a href="#servicios" class="btn btn-outline">
-            Ver servicios y tarifas
-          </a>
-        </div>
-      </div>
-
-      <!-- FOTO PRINCIPAL – REEMPLAZA POR TU FOTO -->
-      <div class="hero-photo">
-        <!--
-          Reemplaza el src por la URL o ruta de tu foto.
-          Ejemplo: <img src="img/jenice-hero.jpg" alt="Jenice Resto - Creadora de contenido" />
-        -->
-        <img src="" alt="Jenice Resto - Creadora de contenido" />
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="section" id="sobre-mi">
-      <div class="section-header">
-        <h2 class="section-title">Sobre Jenice</h2>
-        <p class="section-sub">Aventura, autenticidad y storytelling visual.</p>
-      </div>
-      <p class="about-text">
-        Soy creadora de contenido y me apasiona la aventura. Me encanta compartir mis experiencias únicas
-        y capturar la belleza de cada lugar que visito a través de mi contenido.  
-        Mi objetivo es inspirar a otros a descubrir Puerto Rico y el mundo conmigo, mientras ayudo a marcas
-        a comunicar sus experiencias de forma auténtica, visual y cercana.
-        He colaborado con marcas como Ocean Spray y proyectos enfocados en travel y lifestyle.
-      </p>
-    </section>
-
-    <!-- SERVICIOS -->
-    <section class="section" id="servicios">
-      <div class="section-header">
-        <h2 class="section-title">Servicios y paquetes</h2>
-        <p class="section-sub">Opciones claras, precios visibles y contenido alineado a tus objetivos.</p>
-      </div>
-
-      <div class="services-grid">
-        <!-- PAQUETE 1 -->
-        <article class="card">
-          <h3>Paquete Básico</h3>
-          <!-- EDITA EL PRECIO AQUÍ -->
-          <div class="price">
-            $___ <span>por colaboración</span>
-          </div>
-          <ul>
-            <!-- EDITA LOS ENTREGABLES SEGÚN TUS PAQUETES -->
-            <li>1 visita / experiencia</li>
-            <li>1–2 Reels para Instagram</li>
-            <li>1 set de stories (3–5 frames)</li>
-            <li>Uso orgánico en redes de la marca</li>
-          </ul>
-          <div class="card-footer">
-            Ideal para probar una primera colaboración y generar contenido puntual.
-          </div>
-        </article>
-
-        <!-- PAQUETE 2 -->
-        <article class="card">
-          <h3>Paquete Experiencia</h3>
-          <div class="price">
-            $___ <span>por campaña</span>
-          </div>
-          <ul>
-            <li>1–2 días de experiencia</li>
-            <li>2–3 Reels para Instagram</li>
-            <li>2 sets de stories (5–8 frames)</li>
-            <li>Galería de fotos seleccionadas para la marca</li>
-          </ul>
-          <div class="card-footer">
-            Perfecto para hoteles, restaurantes y experiencias que quieren mayor exposición.
-          </div>
-        </article>
-
-        <!-- PAQUETE 3 -->
-        <article class="card">
-          <h3>Paquete Signature / UGC</h3>
-          <div class="price">
-            $___ <span>contenido UGC</span>
-          </div>
-          <ul>
-            <li>Videos UGC verticales listos para ads</li>
-            <li>Guion y concepto alineado a la marca</li>
-            <li>Entrega en alta calidad sin publicar en mi perfil (opcional)</li>
-            <li>Derechos de uso por tiempo definido</li>
-          </ul>
-          <div class="card-footer">
-            Enfocado en contenido reutilizable para campañas pagadas y redes de la marca.
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO -->
-    <section class="section" id="portfolio">
-      <div class="section-header">
-        <h2 class="section-title">Trabajo reciente</h2>
-        <p class="section-sub">Una muestra de experiencias, lugares y marcas con las que he trabajado.</p>
-      </div>
-
-      <div class="portfolio-grid">
-        <!-- ITEM 1 – REEMPLAZA IMAGEN -->
+<section>
+    <h2>About Me / Sobre Mí</h2>
+    <div class="dual">
         <div>
-          <div class="portfolio-item">
-            <img src="" alt="Retrato de Jenice Resto" />
-          </div>
-          <p class="portfolio-caption">Retrato de creadora · Uso para presentaciones y colaboraciones.</p>
+            <h3>ESPAÑOL</h3>
+            <p>Soy Jenice Resto, creadora de contenido especializada en travel & lifestyle para el mercado hispano en Puerto Rico, LATAM y Estados Unidos. Mi enfoque combina estética minimalista, storytelling auténtico y contenido estratégico diseñado para inspirar, conectar y generar resultados reales para las marcas.</p>
         </div>
-
-        <!-- ITEM 2 – REEMPLAZA IMAGEN -->
         <div>
-          <div class="portfolio-item">
-            <img src="" alt="Contenido en restaurante / experiencia gastronómica" />
-          </div>
-          <p class="portfolio-caption">Experiencia gastronómica · Cobertura visual para restaurante.</p>
+            <h3>ENGLISH</h3>
+            <p>I’m Jenice Resto, a travel & lifestyle content creator focused on the Hispanic market across Puerto Rico, LATAM, and the United States. My work blends minimal aesthetics, authentic storytelling, and strategic content designed to inspire, connect, and deliver real results for brands.</p>
         </div>
+    </div>
+</section>
 
-        <!-- ITEM 3 – REEMPLAZA IMAGEN -->
+<section>
+    <h2>Services / Servicios</h2>
+    <div class="dual">
         <div>
-          <div class="portfolio-item">
-            <img src="" alt="Contenido de viaje / hotel / destino" />
-          </div>
-          <p class="portfolio-caption">Travel & lifestyle · Contenido para destinos y hoteles.</p>
+            <h3>ESPAÑOL</h3>
+            <ul>
+                <li>Creación de contenido para Instagram y TikTok</li>
+                <li>Contenido UGC profesional</li>
+                <li>Promoción de hoteles, restaurantes y experiencias</li>
+                <li>Modelaje y presencia en cámara</li>
+                <li>Cobertura de eventos</li>
+                <li>Reseñas de productos y servicios</li>
+            </ul>
         </div>
-      </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section class="section" id="contacto">
-      <div class="section-header">
-        <h2 class="section-title">¿Listos para crear algo juntos?</h2>
-        <p class="section-sub">Una propuesta clara, contenido auténtico y una experiencia alineada a tu marca.</p>
-      </div>
-
-      <div class="contact-box">
-        <p class="contact-text">
-          Cuéntame sobre tu marca, la experiencia que quieres destacar y el tipo de contenido que estás buscando.
-          Te puedo compartir una propuesta personalizada con entregables, fechas y tarifas claras.
-        </p>
-        <div style="display:flex; flex-direction:column; gap:8px;">
-          <!-- EDITA A WHATSAPP O EMAIL -->
-          <a href="mailto:colaboraciones@jeniceresto.com?subject=Colaboración%20con%20Jenice%20Resto" class="btn btn-primary">
-            Enviar brief / propuesta
-          </a>
-          <a href="https://www.instagram.com/jeniceresto" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-            Ver más contenido en Instagram
-          </a>
+        <div>
+            <h3>ENGLISH</h3>
+            <ul>
+                <li>Instagram & TikTok content creation</li>
+                <li>Professional UGC content</li>
+                <li>Hotel, restaurant & experience promotion</li>
+                <li>Modeling and on‑camera presence</li>
+                <li>Event coverage</li>
+                <li>Product and service reviews</li>
+            </ul>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <!-- FOOTER -->
-    <footer>
-      <span>© <span id="year"></span> Jenice Resto. Todos los derechos reservados.</span>
-      <span>Dominio sugerido: jeniceresto.com</span>
-    </footer>
-  </div>
+<section>
+    <h2>Packages / Paquetes</h2>
+    <div class="dual">
+        <div class="package-box">
+            <h3>Instagram Post (10 photos)</h3>
+            <p>$200</p>
+        </div>
+        <div class="package-box">
+            <h3>Instagram Reel + TikTok Video</h3>
+            <p>$350</p>
+        </div>
+        <div class="package-box">
+            <h3>All‑Inclusive Package</h3>
+            <p>$450</p>
+            <p>Stories, exclusive portfolio photos & videos, Reel, Instagram Post</p>
+        </div>
+        <div class="package-box">
+            <h3>On‑Camera Talent (No posting)</h3>
+            <p>$250 · Hasta 3 horas</p>
+        </div>
+    </div>
+</section>
 
-  <script>
-    // Año automático en el footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<section>
+    <h2>Analytics / Estadísticas</h2>
+    <div class="stats-box">
+        <p><strong>Alcance mensual:</strong> 500K visualizaciones</p>
+        <p><strong>Seguidores:</strong> 23.6K</p>
+        <p><strong>Edad principal:</strong> 25–34 años</p>
+        <p><strong>Género:</strong> 69.9% mujeres · 30.1% hombres</p>
+        <p><strong>Países principales:</strong> LATAM y Estados Unidos</p>
+    </div>
+</section>
+
+<section>
+    <h2>Recent Work / Trabajos Recientes</h2>
+    <p>Here is a selection of my latest work, featuring collaborations with hotels, restaurants, boutiques, and tourism experiences.</p>
+
+    <div class="reels">
+        <iframe src="https://www.instagram.com/reel/DXferAykeNH/embed" allowfullscreen></iframe>
+        <iframe src="https://www.instagram.com/reel/DSbCaoKkddQ/embed" allowfullscreen></iframe>
+        <iframe src="https://www.instagram.com/reel/DPBrAD1jb6f/embed" allowfullscreen></iframe>
+    </div>
+</section>
+
+<footer>
+    <h2>Contact / Contacto</h2>
+    <p>Email: <a href="mailto:restojenice@gmail.com">restojenice@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/jeniceresto">@jeniceresto</a></p>
+    <p>Phone: 787-239-5768</p>
+</footer>
+
 </body>
 </html>
