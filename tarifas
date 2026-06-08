@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenice Resto | Tarifas y Paquetes</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; background: #ffffff; color: #222; }
+        header { background: #cfe8ff; padding: 50px 20px; text-align: center; }
+        header h1 { font-size: 36px; margin: 0; color: #1a1a1a; }
+        header p { font-size: 18px; margin: 10px 0 0; color: #555; }
+        section { padding: 50px 20px; max-width: 900px; margin: auto; }
+        h2 { font-size: 28px; color: #1a1a1a; text-align: center; margin-bottom: 40px; }
+        .grid-paquetes { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+        .tarjeta-precio { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 30px; flex: 1; min-width: 260px; max-width: 350px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; }
+        .tarjeta-precio h3 { margin: 0 0 10px 0; font-size: 22px; color: #1a1a1a; }
+        .precio { font-size: 32px; font-weight: bold; color: #0056b3; margin: 15px 0; }
+        .tarjeta-precio ul { padding-left: 20px; margin: 0 0 25px 0; font-size: 15px; line-height: 1.6; }
+        .nota-adicional { background: #fff9e6; border-left: 4px solid #ffcc00; padding: 15px; margin-top: 40px; border-radius: 0 4px 4px 0; font-size: 15px; }
+        .btn-contacto { display: block; text-align: center; background: #0056b3; color: white; padding: 12px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        .btn-contacto:hover { background: #004494; }
+        footer { text-align: center; padding: 30px; background: #f1f1f1; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tarifas y Colaboraciones</h1>
+        <p>Jenice Resto | Creadora de Contenido</p>
+    </header>
+
+    <section>
+        <h2>Mis Paquetes</h2>
+        
+        <div class="grid-paquetes">
+            <div class="tarjeta-precio">
+                <div>
+                    <h3>Promo Rápida</h3>
+                    <p>Ideal para darle visibilidad a un plato o servicio específico de tu negocio.</p>
+                    <div class="precio">$XX</div>
+                    <ul>
+                        <li>1 Reel o TikTok en mi perfil</li>
+                        <li>3 Stories corridos con el link de tu negocio</li>
+                        <li>Pueden compartir el video en sus redes</li>
+                    </ul>
+                </div>
+                <a href="mailto:tu-email@ejemplo.com?subject=Me%20interesa%20la%20Promo%20Rapida" class="btn-contacto">Me interesa este</a>
+            </div>
+
+            <div class="tarjeta-precio" style="border-color: #0056b3; background: #fdfeff;">
+                <div>
+                    <h3>La Experiencia Completa</h3>
+                    <p>Perfecto para mostrar todo lo que ofrece tu alojamiento o restaurante a fondo.</p>
+                    <div class="precio">$XX</div>
+                    <ul>
+                        <li>1 Reel o TikTok súper completo y estético</li>
+                        <li>1 Post de fotos o carrusel en mi perfil</li>
+                        <li>Mínimo de 5 Stories mientras estoy allí</li>
+                        <li>Se queda en mis Highlights (Destacados) por 30 días</li>
+                    </ul>
+                </div>
+                <a href="mailto:tu-email@ejemplo.com?subject=Me%20interesa%20la%20Experiencia%20Completa" class="btn-contacto">Me interesa este</a>
+            </div>
+
+            <div class="tarjeta-precio">
+                <div>
+                    <h3>Videos para tu marca (UGC)</h3>
+                    <p>Contenido creado por mí, pero exclusivo para que ustedes lo suban y lo pauten.</p>
+                    <div class="precio">$XX</div>
+                    <ul>
+                        <li>2 Videos en formato vertical listos para publicar (no los subo a mis redes)</li>
+                        <li>Creados para llamar la atención rápido</li>
+                        <li>Pueden usarlos en sus anuncios pagados por 3 meses</li>
+                    </ul>
+                </div>
+                <a href="mailto:tu-email@ejemplo.com?subject=Me%20interesan%20los%20videos%20UGC" class="btn-contacto">Me interesa este</a>
+            </div>
+        </div>
+
+        <div class="nota-adicional">
+            <strong>Detallitos a tener en cuenta:</strong>
+            <ul>
+                <li>Si la visita es fuera del área metro, cuadramos los gastos de transportación o estadía aparte.</li>
+                <li>Si necesitan cambiar algo del paquete o usar los videos por más tiempo, lo hablamos y ajustamos el precio.</li>
+                <li>Pido el 50% de depósito para separar la fecha de la visita.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Jenice Resto.</p>
+    </footer>
+
+</body>
+</html>
