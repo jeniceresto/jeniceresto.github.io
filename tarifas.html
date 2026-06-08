@@ -6,20 +6,31 @@
     <title>Jenice Resto | Tarifas y Paquetes</title>
     <style>
         body { margin: 0; font-family: Arial, sans-serif; background: #ffffff; color: #222; }
-        header { background: #cfe8ff; padding: 50px 20px; text-align: center; }
-        header h1 { font-size: 36px; margin: 0; color: #1a1a1a; }
-        header p { font-size: 18px; margin: 10px 0 0; color: #555; }
+        header { background: #cfe8ff; padding: 60px 20px; text-align: center; }
+        header h1 { font-size: 40px; margin: 0; color: #1a1a1a; }
+        header p { font-size: 18px; max-width: 700px; margin: 10px auto 0; color: #444; }
         section { padding: 50px 20px; max-width: 900px; margin: auto; }
-        h2 { font-size: 28px; color: #1a1a1a; text-align: center; margin-bottom: 40px; }
+        h2 { font-size: 32px; margin-bottom: 25px; color: #1a1a1a; border-bottom: 2px solid #cfe8ff; padding-bottom: 10px; }
+        .dual { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+        .dual div { flex: 1; min-width: 280px; }
+        .stats-box { background: #f7f7f7; padding: 25px; border-radius: 8px; text-align: center; box-sizing: border-box; }
+        .stats-box h3 { font-size: 32px; color: #0056b3; margin: 0 0 10px 0; }
+        .destacado { background: #fff9e6; border-left: 4px solid #ffcc00; padding: 15px; margin-top: 20px; border-radius: 0 4px 4px 0; font-size: 15px; line-height: 1.6; }
+        .brand-intro { text-align: center; font-size: 18px; color: #444; margin-bottom: 30px; }
+        .brands-grid { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; align-items: center; margin-bottom: 40px; }
+        .brands-grid img { max-width: 130px; height: auto; object-fit: contain; }
+        
+        /* Estilos de las tarjetas de precios */
         .grid-paquetes { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
-        .tarjeta-precio { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 30px; flex: 1; min-width: 260px; max-width: 350px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; }
-        .tarjeta-precio h3 { margin: 0 0 10px 0; font-size: 22px; color: #1a1a1a; }
-        .precio { font-size: 32px; font-weight: bold; color: #0056b3; margin: 15px 0; }
-        .tarjeta-precio ul { padding-left: 20px; margin: 0 0 25px 0; font-size: 15px; line-height: 1.6; }
-        .nota-adicional { background: #fff9e6; border-left: 4px solid #ffcc00; padding: 15px; margin-top: 40px; border-radius: 0 4px 4px 0; font-size: 15px; }
-        .btn-contacto { display: block; text-align: center; background: #0056b3; color: white; padding: 12px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        .tarjeta-precio { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 25px; flex: 1; min-width: 260px; max-width: 400px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; }
+        .tarjeta-precio h3 { margin: 0 0 5px 0; font-size: 22px; color: #1a1a1a; }
+        .precio { font-size: 34px; font-weight: bold; color: #0056b3; margin: 15px 0; }
+        .tarjeta-precio p.desc { font-size: 14px; line-height: 1.5; margin: 0 0 20px 0; color: #555; }
+        .btn-contacto { display: block; text-align: center; background: #0056b3; color: white; padding: 12px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: auto; font-size: 15px; }
         .btn-contacto:hover { background: #004494; }
-        footer { text-align: center; padding: 30px; background: #f1f1f1; font-size: 14px; }
+        .nota-adicional { background: #fff9e6; border-left: 4px solid #ffcc00; padding: 15px; margin-top: 40px; border-radius: 0 4px 4px 0; font-size: 15px; }
+        .nota-adicional ul { margin: 5px 0 0 0; padding-left: 20px; }
+        footer { text-align: center; padding: 50px 20px; background: #f1f1f1; color: #222; }
     </style>
 </head>
 <body>
@@ -30,65 +41,104 @@
     </header>
 
     <section>
+        <h2>Sobre Mí</h2>
+        <p style="font-size: 16px; line-height: 1.6; color: #333;">
+            ¡Hola! Me dedico a explorar y compartir lo mejor en estadías, gastronomía y aventuras locales. Mi objetivo es conectar a mi comunidad con experiencias reales y espacios increíbles, creando contenido visualmente estético y dinámico que resalte la esencia única de cada lugar.
+        </p>
+    </section>
+
+    <section>
+        <h2>Mi Comunidad e Impacto</h2>
+        <div class="dual">
+            <div class="stats-box">
+                <h3>25K</h3>
+                <p style="margin: 0; font-weight: bold;">Instagram</p>
+            </div>
+            <div class="stats-box">
+                <h3>22K</h3>
+                <p style="margin: 0; font-weight: bold;">TikTok</p>
+            </div>
+            <div class="stats-box" style="background: #e6f2ff; border: 1px solid #cfe8ff;">
+                <h3 style="color: #004494;">500K</h3>
+                <p style="margin: 0; font-weight: bold; color: #004494;">Cuentas Alcanzadas</p>
+            </div>
+        </div>
+        <div class="destacado">
+            <strong>¿Quiénes me ven?</strong> 
+            <p style="margin: 5px 0 0 0;">Una audiencia sumamente activa compuesta en su mayoría por usuarios entre los <strong>25 a 44 años</strong> (hombres 61%, mujeres 39%). El <strong>71% de mi público es de Puerto Rico</strong>, seguido por un 22% de Estados Unidos, lo que me permite un impacto directo en el mercado local y el turismo interno.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Marcas con las que he trabajado</h2>
+        <p class="brand-intro">Más de 300 colaboraciones exitosas con marcas locales e internacionales.</p>
+        <div class="brands-grid">
+            <img src="IMG_5686.png" alt="Ocean Spray">
+            <img src="IMG_5775.png" alt="Airbnb">
+            <img src="IMG_6086.png" alt="Little Caesars">
+            <img src="IMG_6088.png" alt="Popeyes">
+        </div>
+    </section>
+
+    <section>
         <h2>Mis Paquetes</h2>
         
         <div class="grid-paquetes">
+            
             <div class="tarjeta-precio">
                 <div>
-                    <h3>Promo Rápida</h3>
-                    <p>Ideal para darle visibilidad a un plato o servicio específico de tu negocio.</p>
-                    <div class="precio">$XX</div>
-                    <ul>
-                        <li>1 Reel o TikTok en mi perfil</li>
-                        <li>3 Stories corridos con el link de tu negocio</li>
-                        <li>Pueden compartir el video en sus redes</li>
-                    </ul>
+                    <h3>Instagram Post</h3>
+                    <p style="color: #666; font-size: 13px; margin: 0;">(10 fotos)</p>
+                    <div class="precio">$200</div>
+                    <p class="desc">Secuencia de hasta 10 fotos estéticas en formato carrusel publicado en mi perfil, con copy y hashtags totalmente optimizados.</p>
                 </div>
-                <a href="mailto:tu-email@ejemplo.com?subject=Me%20interesa%20la%20Promo%20Rapida" class="btn-contacto">Me interesa este</a>
+                <a href="https://wa.me/17872395768?text=Hola%20Jenice!%20Me%20interesa%20el%20paquete%20de%20Instagram%20Post%20(%24200)" class="btn-contacto" target="_blank">Me interesa este</a>
+            </div>
+
+            <div class="tarjeta-precio">
+                <div>
+                    <h3>Instagram Reel + TikTok Video</h3>
+                    <p style="color: #666; font-size: 13px; margin: 0;">(Video Vertical)</p>
+                    <div class="precio">$350</div>
+                    <p class="desc">Creación de un video vertical de alta calidad, editado con transiciones dinámicas, música en tendencia y publicado en ambas plataformas.</p>
+                </div>
+                <a href="https://wa.me/17872395768?text=Hola%20Jenice!%20Me%20interesa%20el%20paquete%20de%20Reel%20%2B%20TikTok%20(%24350)" class="btn-contacto" target="_blank">Me interesa este</a>
             </div>
 
             <div class="tarjeta-precio" style="border-color: #0056b3; background: #fdfeff;">
                 <div>
-                    <h3>La Experiencia Completa</h3>
-                    <p>Perfecto para mostrar todo lo que ofrece tu alojamiento o restaurante a fondo.</p>
-                    <div class="precio">$XX</div>
-                    <ul>
-                        <li>1 Reel o TikTok súper completo y estético</li>
-                        <li>1 Post de fotos o carrusel en mi perfil</li>
-                        <li>Mínimo de 5 Stories mientras estoy allí</li>
-                        <li>Se queda en mis Highlights (Destacados) por 30 días</li>
-                    </ul>
+                    <h3>Paquete Completo</h3>
+                    <p style="color: #0056b3; font-size: 13px; margin: 0; font-weight: bold;">Recomendado</p>
+                    <div class="precio">$450</div>
+                    <p class="desc">Cobertura integral de tu marca o espacio. Incluye secuencia de Stories en tiempo real, fotos fijas/carrusel y la publicación de un Reel dedicado.</p>
                 </div>
-                <a href="mailto:tu-email@ejemplo.com?subject=Me%20interesa%20la%20Experiencia%20Completa" class="btn-contacto">Me interesa este</a>
+                <a href="https://wa.me/17872395768?text=Hola%20Jenice!%20Me%20interesa%20el%20Paquete%20Completo%20(%24450)" class="btn-contacto" target="_blank">Me interesa este</a>
             </div>
 
             <div class="tarjeta-precio">
                 <div>
-                    <h3>Videos para tu marca (UGC)</h3>
-                    <p>Contenido creado por mí, pero exclusivo para que ustedes lo suban y lo pauten.</p>
-                    <div class="precio">$XX</div>
-                    <ul>
-                        <li>2 Videos en formato vertical listos para publicar (no los subo a mis redes)</li>
-                        <li>Creados para llamar la atención rápido</li>
-                        <li>Pueden usarlos en sus anuncios pagados por 3 meses</li>
-                    </ul>
+                    <h3>On-Camera Talent</h3>
+                    <p style="color: #666; font-size: 13px; margin: 0;">(Sin publicación)</p>
+                    <div class="precio">$250</div>
+                    <p class="desc">Colaboración profesional como talento y presentadora en cámara para grabaciones, producciones propias o eventos de tu marca. (Hasta 3 horas).</p>
                 </div>
-                <a href="mailto:tu-email@ejemplo.com?subject=Me%20interesan%20los%20videos%20UGC" class="btn-contacto">Me interesa este</a>
+                <a href="https://wa.me/17872395768?text=Hola%20Jenice!%20Me%20interesa%20el%20paquete%20de%20On-Camera%20Talent%20(%24250)" class="btn-contacto" target="_blank">Me interesa este</a>
             </div>
+
         </div>
 
         <div class="nota-adicional">
             <strong>Detallitos a tener en cuenta:</strong>
             <ul>
                 <li>Si la visita es fuera del área metro, cuadramos los gastos de transportación o estadía aparte.</li>
-                <li>Si necesitan cambiar algo del paquete o usar los videos por más tiempo, lo hablamos y ajustamos el precio.</li>
-                <li>Pido el 50% de depósito para separar la fecha de la visita.</li>
+                <li>Pido el 50% de depósito para separar la fecha de la visita o grabación en el calendario.</li>
+                <li>Si tu marca requiere exclusividad extendida o derechos de uso comercial prolongados para pauta publicitaria, ajustamos los términos en la propuesta final.</li>
             </ul>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Jenice Resto.</p>
+        <p>&copy; 2026 Jenice Resto. Todos los derechos reservados.</p>
     </footer>
 
 </body>
