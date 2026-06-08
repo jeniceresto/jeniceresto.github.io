@@ -6,10 +6,17 @@
     <title>Jenice Resto | Media Kit</title>
     <style>
         body { margin: 0; font-family: Arial, sans-serif; background: #ffffff; color: #222; }
-        header { background: #cfe8ff; padding: 60px 20px; text-align: center; }
         
-        /* Estilo para tu foto de perfil estético en el header */
+        /* Selector de Idioma */
+        .lang-switch { position: absolute; top: 20px; right: 20px; display: flex; gap: 5px; z-index: 10; }
+        .lang-switch button { background: white; border: 1px solid #ccc; padding: 6px 12px; font-weight: bold; cursor: pointer; border-radius: 4px; font-size: 14px; }
+        .lang-switch button.active { background: #0056b3; color: white; border-color: #0056b3; }
+        
+        header { background: #cfe8ff; padding: 60px 20px; text-align: center; position: relative; }
+        
+        /* Foto de perfil (Grande) y Logo (Pequeño) */
         .profile-pic { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .brand-logo-small { max-width: 90px; height: auto; margin-top: 20px; object-fit: contain; }
         
         header h1 { font-size: 40px; margin: 0; color: #1a1a1a; }
         header p { font-size: 18px; max-width: 700px; margin: 10px auto 0; color: #444; }
@@ -30,25 +37,41 @@
         .brands-grid { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; align-items: center; margin-top: 20px; }
         .brands-grid img { max-width: 130px; height: auto; object-fit: contain; }
         footer { text-align: center; padding: 50px 20px; background: #f1f1f1; color: #222; }
+
+        /* Control de visibilidad de idiomas */
+        body.lang-en .lang-es { display: none !important; }
+        body.lang-es .lang-en { display: none !important; }
     </style>
 </head>
-<body>
+<body class="lang-es">
+
+    <div class="lang-switch">
+        <button id="btn-es" class="active" onclick="changeLang('es')">ES</button>
+        <button id="btn-en" onclick="changeLang('en')">EN</button>
+    </div>
 
     <header>
         <img src="IMG_8980.jpeg" alt="Jenice Resto" class="profile-pic">
         <h1>Jenice Resto</h1>
-        <p>Creadora de Contenido | Travel, Alojamientos, Restaurantes, Experiencias, Marcas y más</p>
+        <p class="lang-es">Creadora de Contenido | Viajes, Alojamientos, Restaurantes, Experiencias, Marcas y más</p>
+        <p class="lang-en">Content Creator | Travel, Stays, Restaurants, Experiences, Brands & more</p>
+        <img src="IMG_5775.png" alt="Logo Jenice Resto" class="brand-logo-small">
     </header>
 
     <section>
-        <h2>Sobre Mí</h2>
-        <p style="font-size: 16px; line-height: 1.6; color: #333;">
-            ¡Hola! Me dedico a explorar y compartir lo mejor en travel, estadías, gastronomía, marcas y aventuras locales. Mi objetivo es conectar a mi comunidad con experiencias reales y espacios increíbles, creando contenido visualmente estético y dinámico que resalte la esencia única de cada proyecto.
+        <h2 class="lang-es">Sobre Mí</h2>
+        <h2 class="lang-en">About Me</h2>
+        <p class="lang-es" style="font-size: 16px; line-height: 1.6; color: #333;">
+            ¡Hola! Me dedico a explorar y compartir lo mejor en viajes, estadías, gastronomía, marcas y aventuras locales. Mi objetivo es conectar a mi comunidad con experiencias reales y espacios increíbles, creando contenido visualmente estético y dinámico que resalte la esencia única de cada proyecto.
+        </p>
+        <p class="lang-en" style="font-size: 16px; line-height: 1.6; color: #333;">
+            Hi! I specialize in exploring and sharing the best in travel, stays, gastronomy, brands, and local adventures. My goal is to connect my community with authentic experiences and incredible spaces, creating visually aesthetic and dynamic content that highlights the unique essence of each project.
         </p>
     </section>
 
     <section>
-        <h2>Mi Comunidad e Impacto</h2>
+        <h2 class="lang-es">Mi Comunidad e Impacto</h2>
+        <h2 class="lang-en">My Community & Impact</h2>
         <div class="dual">
             <div class="stats-box">
                 <h3>25K</h3>
@@ -60,49 +83,73 @@
             </div>
             <div class="stats-box" style="background: #e6f2ff; border: 1px solid #cfe8ff;">
                 <h3 style="color: #004494;">500K</h3>
-                <p style="margin: 0; font-weight: bold; color: #004494;">Cuentas Alcanzadas</p>
+                <p class="lang-es" style="margin: 0; font-weight: bold; color: #004494;">Cuentas Alcanzadas</p>
+                <p class="lang-en" style="margin: 0; font-weight: bold; color: #004494;">Monthly Reach</p>
             </div>
         </div>
-        <div class="destacado">
+        <div class="destacado lang-es">
             <strong>¿Quiénes me ven?</strong> 
             <p style="margin: 5px 0 0 0;">Una audiencia sumamente activa compuesta en su mayoría por usuarios entre los <strong>25 a 44 años</strong> (hombres 61%, mujeres 39%). El <strong>71% de mi público es de Puerto Rico</strong>, seguido por un 22% de Estados Unidos, lo que me permite un impacto directo en el mercado local y el turismo interno.</p>
         </div>
-    </section>
-
-    <section>
-        <h2>Marcas con las que he trabajado</h2>
-        <p class="brand-intro">Más de 300 colaboraciones exitosas con marcas locales e internacionales.</p>
-        <div class="brands-grid">
-            <img src="IMG_5775.png" alt="Jenice Resto Logo" style="max-width: 150px; border-radius: 8px;">
-            <img src="IMG_5686.png" alt="Ocean Spray">
-            <img src="IMG_6086.png" alt="Little Caesars">
-            <img src="IMG_6088.png" alt="Popeyes">
-            <img src="IMG_6093.png" alt="Marca">
+        <div class="destacado lang-en">
+            <strong>Audience Demographics</strong> 
+            <p style="margin: 5px 0 0 0;">A highly active audience primarily composed of users between <strong>25 and 44 years old</strong> (61% men, 39% women). <strong>71% of my audience is located in Puerto Rico</strong>, followed by 22% in the United States, driving direct engagement in local markets and internal tourism.</p>
         </div>
     </section>
 
     <section>
-        <h2>Lo que hago</h2>
+        <h2 class="lang-es">Marcas con las que he trabajado</h2>
+        <h2 class="lang-en">Brands I've Worked With</h2>
+        <p class="brand-intro lang-es">Más de 300 colaboraciones exitosas con marcas locales e internacionales.</p>
+        <p class="brand-intro lang-en">Over 300 successful collaborations with local and international brands.</p>
+        <div class="brands-grid">
+            <img src="IMG_5686.png" alt="Marca 1">
+            <img src="IMG_6086.png" alt="Marca 2">
+            <img src="IMG_6088.png" alt="Marca 3">
+            <img src="IMG_6093.png" alt="Marca 4">
+        </div>
+    </section>
+
+    <section>
+        <h2 class="lang-es">Lo que hago</h2>
+        <h2 class="lang-en">What I Do</h2>
         <div class="dual">
             <div class="package-box">
-                <h4>Videos para tu marca (UGC)</h4>
-                <p>Videos y fotos en formato vertical que capturan la atención rápido. Perfectos para usar en las redes de tu negocio o en anuncios pagados.</p>
+                <h4 class="lang-es">Creación de Contenido (UGC)</h4>
+                <h4 class="lang-en">Content Creation (UGC)</h4>
+                <p class="lang-es">Videos y fotos en formato vertical que capturan la atención rápido. Perfectos para usar en las redes de tu negocio o en anuncios pagados.</p>
+                <p class="lang-en">High-converting vertical videos and photos optimized with strong hooks. Perfect for your brand's organic social platforms or paid ad campaigns.</p>
             </div>
             <div class="package-box">
-                <h4>Reseñas y Experiencias</h4>
-                <p>Visitas a tu alojamiento o restaurante con una cobertura completa. Subo videos dinámicos a mis redes y comparto todo el recorrido por mis Stories.</p>
+                <h4 class="lang-es">Reseñas y Experiencias</h4>
+                <h4 class="lang-en">Reviews & Experiences</h4>
+                <p class="lang-es">Visitas a tu alojamiento o restaurante con una cobertura completa. Subo videos dinámicos a mis redes y comparto todo el recorrido por mis Stories.</p>
+                <p class="lang-en">In-depth coverage of stays, locations, or restaurants. I create dynamic videos for my feed and share real-time experiences via daily Stories.</p>
             </div>
         </div>
-        <p style="font-size: 15px; color: #555; margin-top: 20px; font-style: italic;">
+        <p class="lang-es" style="font-size: 15px; color: #555; margin-top: 20px; font-style: italic;">
             *Las colaboraciones se ajustan a los objetivos de cada campaña. Contáctame para diseñar una propuesta a la medida o solicitar mi tarifa privada.
+        </p>
+        <p class="lang-en" style="font-size: 15px; color: #555; margin-top: 20px; font-style: italic;">
+            *Collaborations are tailored to each campaign's specific goals. Contact me to design a custom proposal or to request my private rate card.
         </p>
     </section>
 
     <footer>
-        <h2>¡Vamos a crear algo súper chulo!</h2>
-        <p>Envíame un mensaje directo por WhatsApp para coordinar propuestas y colaboraciones.</p>
-        <a href="https://wa.me/17872395768?text=Hola%20Jenice!%20Vimos%20tu%20Media%20Kit%20y%20nos%20gustar%C3%ADa%20coordinar%20una%20colaboraci%C3%B3n." class="btn" target="_blank">Contactar por WhatsApp</a>
+        <h2 class="lang-es">¡Vamos a crear algo súper chulo!</h2>
+        <h2 class="lang-en">Let's Create Something Amazing!</h2>
+        <p class="lang-es">Envíame un mensaje directo por WhatsApp para coordinar propuestas y colaboraciones.</p>
+        <p class="lang-en">Send me a direct message on WhatsApp to coordinate custom proposals and brand strategies.</p>
+        <a href="https://wa.me/17872395768?text=Hola%20Jenice!%20Vimos%20tu%20Media%20Kit%20y%20nos%20gustar%C3%ADa%20coordinar%20una%20colaboraci%C3%B3n." class="btn lang-es" target="_blank">Contactar por WhatsApp</a>
+        <a href="https://wa.me/17872395768?text=Hi%20Jenice!%20We%20saw%20your%20Media%20Kit%20and%20would%20love%20to%20discuss%20a%20collaboration." class="btn lang-en" target="_blank">Connect via WhatsApp</a>
     </footer>
 
+    <script>
+        function changeLang(lang) {
+            document.body.className = 'lang-' + lang;
+            document.getElementById('btn-es').className = lang === 'es' ? 'active' : '';
+            document.getElementById('btn-en').className = lang === 'en' ? 'active' : '';
+        }
+    </script>
 </body>
 </html>
