@@ -2,76 +2,49 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jenice Resto | Media Kit</title>
     <style>
-        * { box-sizing: border-box; -webkit-print-color-adjust: exact; }
-        @page { size: A4; margin: 0; }
-        body { background-color: #FAF8F5; margin: 0; padding: 0; font-family: sans-serif; color: #2C2C2C; }
-        .master-container { width: 100%; max-width: 800px; margin: 0 auto; padding: 30px 45px; }
+        body { font-family: sans-serif; background-color: #FAF8F5; margin: 0; padding: 20px; color: #2C2C2C; }
+        .container { max-width: 800px; margin: 0 auto; background: #FFF; padding: 30px; border-radius: 8px; }
         .header { text-align: center; margin-bottom: 20px; }
-        .logo { width: 55px; margin-bottom: 8px; }
-        h1 { font-family: serif; font-size: 38px; text-transform: uppercase; letter-spacing: 3px; margin: 0; }
-        .niche { font-size: 9px; letter-spacing: 4px; color: #A67C52; text-transform: uppercase; margin-top: 5px; font-weight: bold; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 25px; height: 200px; }
-        .gallery-grid img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; }
-        .main-content { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 35px; }
-        .section-title { font-family: serif; font-size: 18px; font-style: italic; color: #A67C52; margin-bottom: 10px; border-bottom: 1px solid #EAE3D9; padding-bottom: 3px; }
-        .content-text { font-size: 12px; line-height: 1.6; color: #4a4a4a; text-align: justify; margin-bottom: 15px; }
-        .metrics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 15px; }
-        .metric-card { background: #FFF; border: 1px solid #EAE3D9; padding: 10px 5px; text-align: center; border-radius: 4px; }
-        .metric-card.highlight { grid-column: span 2; background: #1a1a1a; color: #FFF; border: none; }
-        .metric-card h3 { font-family: serif; font-size: 26px; margin: 0; }
-        .metric-card p { font-size: 8px; text-transform: uppercase; letter-spacing: 1px; margin: 3px 0 0 0; color: #888; }
-        .metric-card.highlight p { color: #A67C52; }
-        .brand-box { background: #FFF; border: 1px solid #EAE3D9; padding: 12px; border-radius: 4px; text-align: center; }
-        .brand-logos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; align-items: center; margin-bottom: 10px; }
-        .brand-logos img { width: 100%; height: 30px; object-fit: contain; filter: grayscale(100%); opacity: 0.7; }
-        .brand-tagline { font-size: 9.5px; font-style: italic; color: #A67C52; font-weight: bold; }
-        .footer { margin-top: 20px; border-top: 1px solid #EAE3D9; padding-top: 15px; text-align: center; font-size: 10px; letter-spacing: 1.5px; }
+        .name { font-family: serif; font-size: 32px; text-transform: uppercase; margin: 5px 0; }
+        .niche { font-size: 10px; letter-spacing: 2px; color: #A67C52; text-transform: uppercase; }
+        
+        /* Ajuste para que las fotos no se monten */
+        .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+        .gallery img { width: 100%; height: 150px; object-fit: cover; border-radius: 4px; }
+
+        /* Sección de Marcas organizada */
+        .brand-section { margin-top: 20px; padding-top: 20px; border-top: 1px solid #EEE; text-align: center; }
+        .brand-title { font-family: serif; font-size: 16px; color: #A67C52; margin-bottom: 10px; }
+        .brand-logos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; align-items: center; margin-bottom: 10px; }
+        .brand-logos img { width: 100%; height: 40px; object-fit: contain; filter: grayscale(100%); opacity: 0.7; }
+        .brand-text { font-size: 11px; font-style: italic; color: #555; }
     </style>
 </head>
 <body>
-    <div class="master-container">
+    <div class="container">
         <header class="header">
-            <img class="logo" src="IMG_5775.png">
-            <h1>Jenice Resto</h1>
+            <h1 class="name">Jenice Resto</h1>
             <div class="niche">Viajes • Alojamientos • Gastronomía • Experiencias</div>
         </header>
-        <section class="gallery-grid">
+
+        <section class="gallery">
             <img src="IMG_5332.jpeg">
             <img src="IMG_6476.jpeg">
             <img src="IMG_1775.jpeg">
         </section>
-        <main class="main-content">
-            <div class="col-left">
-                <div class="section-title">Sobre Mí</div>
-                <div class="content-text">Estratega visual y creadora de contenido con base en Puerto Rico. Me especializo en transformar destinos y productos en experiencias aspiracionales. Mi enfoque combina estética de alta calidad con un storytelling auténtico que conecta emocionalmente con mi comunidad.</div>
-                <div class="section-title">Audiencia y Alcance</div>
-                <div class="content-text">Mi comunidad representa un segmento de alto valor: adultos de 25 a 44 años. Con un impacto predominante en Puerto Rico (71%) y Estados Unidos (22%), mi perfil es la plataforma ideal para marcas que buscan visibilidad real y confianza.</div>
+
+        <section class="brand-section">
+            <div class="brand-title">Marcas y Colaboraciones</div>
+            <div class="brand-logos">
+                <img src="IMG_5686.png">
+                <img src="IMG_6086.png">
+                <img src="IMG_6088.png">
+                <img src="IMG_6093.png">
             </div>
-            <div class="col-right">
-                <div class="section-title" style="border:none; justify-content: center;">Impacto Digital</div>
-                <div class="metrics-grid">
-                    <div class="metric-card"><h3>25K</h3><p>Instagram</p></div>
-                    <div class="metric-card"><h3>22K</h3><p>TikTok</p></div>
-                    <div class="metric-card highlight"><h3>500K</h3><p>Cuentas Alcanzadas</p></div>
-                </div>
-                <div class="section-title" style="border:none; justify-content: center;">Trusted By</div>
-                <div class="brand-box">
-                    <div class="brand-logos">
-                        <img src="IMG_5686.png">
-                        <img src="IMG_6086.png">
-                        <img src="IMG_6088.png">
-                        <img src="IMG_6093.png">
-                    </div>
-                    <div class="brand-tagline">Más de 300 colaboraciones exitosas con marcas locales e internacionales.</div>
-                </div>
-            </div>
-        </main>
-        <footer class="footer">
-            <strong>CONTACTO:</strong> +1 (787) 239-5768 | <strong>EMAIL:</strong> jeniceresto.collabs@gmail.com
-        </footer>
+            <p class="brand-text">Más de 300 colaboraciones exitosas con marcas locales e internacionales.</p>
+        </section>
     </div>
 </body>
 </html>
