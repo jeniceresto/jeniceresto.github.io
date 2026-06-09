@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <title>Jenice Resto | Media Kit</title>
     <style>
-        body { font-family: sans-serif; background-color: #FAF8F5; margin: 0; padding: 20px; color: #2C2C2C; }
+        body { font-family: 'Helvetica Neue', sans-serif; background-color: #FAF8F5; margin: 0; padding: 20px; color: #2C2C2C; }
         .container { max-width: 800px; margin: 0 auto; background: #FFF; padding: 30px; border-radius: 8px; }
         .header { text-align: center; margin-bottom: 20px; }
         .name { font-family: serif; font-size: 32px; text-transform: uppercase; margin: 5px 0; }
         .niche { font-size: 10px; letter-spacing: 2px; color: #A67C52; text-transform: uppercase; }
         
-        /* Ajuste para que las fotos no se monten */
+        /* Galería */
         .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
         .gallery img { width: 100%; height: 150px; object-fit: cover; border-radius: 4px; }
 
-        /* Sección de Marcas organizada */
-        .brand-section { margin-top: 20px; padding-top: 20px; border-top: 1px solid #EEE; text-align: center; }
-        .brand-title { font-family: serif; font-size: 16px; color: #A67C52; margin-bottom: 10px; }
+        /* EL TRUCO PARA QUE NO SE ENCIME: Usamos "clear: both" */
+        .breaker { clear: both; margin-top: 20px; }
+
+        .main-content { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
+        .section-title { font-family: serif; font-size: 16px; color: #A67C52; margin-bottom: 10px; border-bottom: 1px solid #EEE; }
+        .content-text { font-size: 12px; line-height: 1.5; color: #555; text-align: justify; }
+
+        /* Métricas y Marcas */
+        .brand-section { margin-top: 20px; padding-top: 20px; border-top: 1px solid #EEE; }
         .brand-logos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; align-items: center; margin-bottom: 10px; }
         .brand-logos img { width: 100%; height: 40px; object-fit: contain; filter: grayscale(100%); opacity: 0.7; }
-        .brand-text { font-size: 11px; font-style: italic; color: #555; }
+        .brand-text { font-size: 11px; font-style: italic; color: #555; text-align: center; }
     </style>
 </head>
 <body>
@@ -35,8 +41,21 @@
             <img src="IMG_1775.jpeg">
         </section>
 
+        <div class="breaker"></div>
+
+        <main class="main-content">
+            <div>
+                <div class="section-title">Sobre Mí</div>
+                <div class="content-text">Estratega visual y creadora de contenido con base en Puerto Rico. Me especializo en transformar destinos y productos en experiencias aspiracionales. Mi enfoque combina estética de alta calidad con un storytelling auténtico que conecta emocionalmente con mi comunidad.</div>
+            </div>
+            <div>
+                <div class="section-title">Audiencia y Alcance</div>
+                <div class="content-text">Mi comunidad representa un segmento de alto valor: adultos de 25 a 44 años. Con un impacto predominante en Puerto Rico (71%) y Estados Unidos (22%), mi perfil es la plataforma ideal para marcas que buscan visibilidad real y confianza.</div>
+            </div>
+        </main>
+
         <section class="brand-section">
-            <div class="brand-title">Marcas y Colaboraciones</div>
+            <div class="section-title" style="text-align: center; border: none;">Marcas y Colaboraciones</div>
             <div class="brand-logos">
                 <img src="IMG_5686.png">
                 <img src="IMG_6086.png">
