@@ -5,109 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jenice Resto | Media Kit</title>
     <style>
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; color: #FFFFFF; background-color: #1a1a1a; }
-        .lang-bar { position: absolute; top: 20px; right: 20px; z-index: 100; }
-        .lang-btn { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 5px 12px; border-radius: 5px; cursor: pointer; font-size: 12px; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; color: #FFFFFF; background-color: #1a1a1a; }
+        .hero { position: relative; height: 80vh; width: 100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('IMG_6476.jpeg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
+        .profile-pic { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #fff; margin-bottom: 15px; object-fit: cover; }
+        h1 { font-size: 28px; letter-spacing: 2px; text-transform: uppercase; margin: 0; }
+        .tagline { font-size: 12px; letter-spacing: 3px; color: #d4af37; margin-bottom: 20px; }
 
-        .hero { position: relative; height: 90vh; width: 100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('IMG_6476.jpeg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
-        .profile-pic { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #fff; margin-bottom: 15px; object-fit: cover; }
-        h1 { font-size: 32px; letter-spacing: 2px; text-transform: uppercase; margin: 0; }
-        .tagline { font-size: 13px; letter-spacing: 3px; color: #d4af37; margin-top: 10px; margin-bottom: 20px; }
+        /* Social Bar */
+        .social-bar { display: flex; gap: 10px; margin-bottom: 20px; }
+        .social-link { color: #1a1a1a; background: #ffffff; padding: 8px 20px; border-radius: 20px; font-weight: bold; font-size: 12px; text-decoration: none; border: 2px solid #d4af37; }
 
-        .social-bar { display: flex; gap: 15px; margin-top: 10px; justify-content: center; }
-        .social-link { color: #1a1a1a; text-decoration: none; font-size: 14px; background: #ffffff; padding: 12px 25px; border-radius: 30px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(255,255,255,0.3); transition: all 0.3s ease; border: 2px solid #d4af37; }
-        .social-link:hover { background: #d4af37; color: #ffffff; transform: translateY(-3px); }
-
-        .content { background: #FFFFFF; color: #1a1a1a; border-radius: 30px 30px 0 0; margin-top: -50px; position: relative; z-index: 10; padding: 40px 20px; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 30px; }
-        .gallery-grid img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; }
-        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 40px; }
-        .stat-card { background: #F9F7F5; padding: 15px 5px; border-radius: 15px; text-align: center; border: 1px solid #EEE; }
-        .stat-val { font-size: 18px; font-weight: 800; }
-        .stat-label { font-size: 8px; text-transform: uppercase; color: #A67C52; margin-top: 5px; }
+        .content { background: #FFFFFF; color: #1a1a1a; border-radius: 30px 30px 0 0; margin-top: -40px; padding: 30px 20px; }
         
-        /* Persuasive Audience Section */
-        .audience-box { background: #1a1a1a; color: #fff; padding: 25px; border-radius: 20px; margin-bottom: 30px; border-left: 5px solid #d4af37; }
-        .audience-text { font-size: 15px; line-height: 1.6; }
-        .highlight { color: #d4af37; font-weight: bold; }
+        /* Sección Estratégica */
+        .strategy-card { background: #fcfcfc; border: 1px solid #eee; padding: 20px; border-radius: 15px; margin-bottom: 20px; }
+        .section-header { font-weight: bold; display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 16px; color: #d4af37; }
+        .list-item { display: flex; gap: 10px; margin-bottom: 10px; font-size: 13px; line-height: 1.5; }
 
-        .feature-card { background: #f9f9f9; padding: 20px; border-radius: 15px; margin-bottom: 15px; display: flex; align-items: center; gap: 15px; }
-        .brands-section { margin-top: 40px; text-align: center; }
-        .brand-logos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 20px; opacity: 0.7; }
-        .brand-logos img { width: 100%; height: 40px; object-fit: contain; filter: grayscale(100%); }
-        .cta-btn { display: block; background: #1a1a1a; color: #fff; text-align: center; padding: 18px; border-radius: 40px; text-decoration: none; font-weight: bold; margin-top: 40px; }
+        .cta-btn { display: block; background: #1a1a1a; color: #fff; text-align: center; padding: 15px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 20px; }
     </style>
 </head>
 <body>
 
-    <div class="lang-bar">
-        <button class="lang-btn" onclick="setLang('es')">ES</button>
-        <button class="lang-btn" onclick="setLang('en')">EN</button>
-    </div>
-
     <div class="hero">
         <img src="IMG_5775.png" class="profile-pic">
-        <h1 id="title">Jenice Resto</h1>
-        <div class="tagline" id="subtitle">VIAJES • GASTRO • EXPERIENCIAS</div>
+        <h1>Jenice Resto</h1>
+        <div class="tagline">TRAVEL • GASTRO • EXPERIENCES</div>
         <div class="social-bar">
-            <a href="https://instagram.com/jeniceresto" class="social-link" target="_blank">IG: 25.8K</a>
-            <a href="https://tiktok.com/@jeniceresto" class="social-link" target="_blank">TikTok: 23K</a>
+            <a href="https://instagram.com/jeniceresto" class="social-link">IG 25.8K</a>
+            <a href="https://tiktok.com/@jeniceresto" class="social-link">TIKTOK 23K</a>
         </div>
     </div>
 
     <div class="content">
-        <div class="gallery-grid">
-            <img src="dji_fly_20260606_134706_52_1780768211388_photo.jpeg">
-            <img src="IMG_5332.jpeg">
-            <img src="IMG_9832.jpeg">
-            <img src="IMG_8966.jpeg">
+        <div class="strategy-card">
+            <div class="section-header"><span>⚡</span> Mi Enfoque de Colaboración</div>
+            <div class="list-item">✅ <b>Contenido "Plug & Play":</b> Videos verticales optimizados, listos para publicar.</div>
+            <div class="list-item">📖 <b>Narrativa de Experiencia:</b> Cuento la historia detrás de tu marca para conectar emocionalmente.</div>
+            <div class="list-item">🎬 <b>Derechos de Uso:</b> Material de alta calidad para tu publicidad pagada.</div>
         </div>
 
-        <div class="stats-grid">
-            <div class="stat-card"><div class="stat-val">500K</div><div class="stat-label">Reach</div></div>
-            <div class="stat-card"><div class="stat-val">2.0M</div><div class="stat-label">Impressions</div></div>
-            <div class="stat-card"><div class="stat-val">81%</div><div class="stat-label">New Aud.</div></div>
+        <div class="strategy-card">
+            <div class="section-header"><span>🎯</span> ¿Qué gana tu marca?</div>
+            <div class="list-item">📈 <b>Diseñado para la acción:</b> Contenido enfocado en generar interés y tráfico a tus reservas.</div>
+            <div class="list-item">🗓️ <b>Contenido Evergreen:</b> Recibes material profesional utilizable por meses.</div>
+            <div class="list-item">🌐 <b>Nuevos Mercados:</b> Expongo tu marca ante una audiencia activa en EE.UU. y LatAm.</div>
+            <div class="list-item">🤝 <b>Validación Real:</b> Una voz auténtica que genera mucha más confianza que un anuncio tradicional.</div>
         </div>
 
-        <h3 id="aud-header">¿Quiénes me siguen?</h3>
-        <div class="audience-box">
-            <div class="audience-text" id="aud-body">
-                Una comunidad <span class="highlight">globalmente activa y de alto valor</span>, con un 62% de usuarios entre 25-44 años. 
-                Mi alcance no se limita a Puerto Rico (70%); cuento con un <span class="highlight">22% de sólida presencia en EE.UU.</span> 
-                y comunidades en crecimiento en Colombia, Rep. Dominicana y México. 
-                Impacto multisectorial ideal para <span class="highlight">hoteles y marcas internacionales</span> que buscan calidad visual y conversión.
-            </div>
-        </div>
-
-        <h3 id="why-title">Por qué colaborar conmigo</h3>
-        <div class="feature-card">🚀 <div id="feat1"><b>Viralidad Orgánica:</b> 81% de mi alcance es nuevo público.</div></div>
-        <div class="feature-card">💎 <div id="feat2"><b>Storytelling:</b> Calidad visual que eleva el valor de tu marca.</div></div>
-
-        <div class="brands-section">
-            <div id="brands-text">Más de 300 colaboraciones exitosas.</div>
-            <div class="brand-logos">
-                <img src="IMG_5686.png"><img src="IMG_6086.png"><img src="IMG_6088.png"><img src="IMG_6093.png">
-            </div>
-        </div>
-
-        <a href="mailto:jeniceresto.collabs@gmail.com" class="cta-btn" id="cta-btn">TRABAJEMOS JUNTOS</a>
+        <a href="mailto:jeniceresto.collabs@gmail.com" class="cta-btn">TRABAJEMOS JUNTOS</a>
     </div>
-
-    <script>
-        const t = {
-            es: { sub: "VIAJES • GASTRO • EXPERIENCIAS", audH: "¿Quiénes me siguen?", audB: "Una comunidad <span class='highlight'>globalmente activa y de alto valor</span>, con un 62% de usuarios entre 25-44 años. Mi alcance no se limita a Puerto Rico (70%); cuento con un <span class='highlight'>22% de sólida presencia en EE.UU.</span> y comunidades en crecimiento en Colombia, Rep. Dominicana y México. Impacto multisectorial ideal para <span class='highlight'>hoteles y marcas internacionales</span> que buscan calidad visual y conversión.", why: "Por qué colaborar conmigo", f1: "<b>Viralidad Orgánica:</b> 81% de mi alcance es nuevo público.", f2: "<b>Storytelling:</b> Calidad visual que eleva tu marca.", br: "Más de 300 colaboraciones exitosas.", cta: "TRABAJEMOS JUNTOS" },
-            en: { sub: "TRAVEL • GASTRO • EXPERIENCES", audH: "Who follows me?", audB: "A <span class='highlight'>globally active, high-value community</span>, with 62% of users aged 25-44. My reach goes beyond Puerto Rico (70%); I have a <span class='highlight'>strong 22% presence in the U.S.</span> and growing communities in Colombia, D.R., and Mexico. Multisectoral impact, ideal for <span class='highlight'>hotels and international brands</span> seeking visual quality and conversion.", why: "Why work with me", f1: "<b>Organic Virality:</b> 81% of my reach is new audience.", f2: "<b>Storytelling:</b> Visual quality that elevates your brand.", br: "Over 300 successful collaborations.", cta: "LET'S WORK TOGETHER" }
-        };
-        function setLang(l) {
-            document.getElementById('subtitle').innerText = t[l].sub;
-            document.getElementById('aud-header').innerText = t[l].audH;
-            document.getElementById('aud-body').innerHTML = t[l].audB;
-            document.getElementById('why-title').innerText = t[l].why;
-            document.getElementById('feat1').innerHTML = t[l].f1;
-            document.getElementById('feat2').innerHTML = t[l].f2;
-            document.getElementById('brands-text').innerText = t[l].br;
-            document.getElementById('cta-btn').innerText = t[l].cta;
-        }
-    </script>
 </body>
 </html>
