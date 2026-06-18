@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenice Resto | Media Kit</title>
+    <style>
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #FFFFFF; margin: 0; color: #1a1a1a; padding: 20px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        
+        .profile { text-align: center; margin-bottom: 30px; }
+        .avatar { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 2px solid #F9F9F9; }
+        h1 { font-size: 24px; margin: 5px 0; font-weight: 600; }
+        .bio { font-size: 14px; color: #666; line-height: 1.5; }
+
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 30px 0; }
+        .stat-box { text-align: center; background: #F9F9F9; padding: 15px; border-radius: 10px; }
+        .stat-val { font-size: 18px; font-weight: 700; }
+        .stat-label { font-size: 9px; text-transform: uppercase; color: #888; letter-spacing: 1px; }
+
+        .accordion { margin-bottom: 10px; border: 1px solid #EEE; border-radius: 10px; overflow: hidden; }
+        .accordion-header { width: 100%; padding: 20px; background: #FFF; border: none; text-align: left; font-size: 15px; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; }
+        .accordion-content { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; font-size: 14px; color: #666; line-height: 1.6; }
+        
+        .brand-logos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 20px; }
+        .brand-logos img { width: 100%; height: 40px; object-fit: contain; filter: grayscale(100%); opacity: 0.6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="IMG_5775.png" class="avatar">
+            <h1>Jenice Resto</h1>
+            <p class="bio">Estratega visual en Puerto Rico.<br>Viajes • Alojamientos • Gastronomía</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-box"><div class="stat-val">231K</div><div class="stat-label">Alcance Único</div></div>
+            <div class="stat-box"><div class="stat-val">2.0M</div><div class="stat-label">Impresiones</div></div>
+            <div class="stat-box"><div class="stat-val">81%</div><div class="stat-label">Audiencia Nueva</div></div>
+        </div>
+
+        <div class="accordion">
+            <button class="accordion-header" onclick="toggle(this)">Sobre Mí <span>+</span></button>
+            <div class="accordion-content">
+                <p style="padding-top:10px;">Estratega visual y creadora de contenido con base en Puerto Rico. Me especializo en transformar destinos y productos en experiencias aspiracionales. Conecto emocionalmente con una comunidad de alto valor en PR y USA.</p>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <button class="accordion-header" onclick="toggle(this)">Marcas y Colaboraciones <span>+</span></button>
+            <div class="accordion-content">
+                <div class="brand-logos">
+                    <img src="IMG_5686.png">
+                    <img src="IMG_6086.png">
+                    <img src="IMG_6088.png">
+                    <img src="IMG_6093.png">
+                </div>
+                <p style="text-align:center; font-style: italic; padding-bottom:10px;">Más de 300 colaboraciones exitosas.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="mailto:jeniceresto.collabs@gmail.com" style="background:#1a1a1a; color:#fff; padding:15px 40px; border-radius:30px; text-decoration:none; font-size:14px; font-weight:bold;">Contactar ahora</a>
+        </div>
+    </div>
+
+    <script>
+        function toggle(btn) {
+            let content = btn.nextElementSibling;
+            content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+            btn.querySelector('span').innerText = content.style.maxHeight ? "-" : "+";
+        }
+    </script>
+</body>
+</html>
