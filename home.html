@@ -32,7 +32,10 @@
 
         .feature-card { background: #fcfcfc; border-left: 3px solid #d4af37; padding: 15px; margin-bottom: 10px; font-size: 13px; line-height: 1.5; }
         
-        .brands-section { text-align: center; margin-top: 20px; }
+        /* Video Portfolio Section */
+        .video-grid { display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 15px; }
+        .video-btn { display: block; background: #1a1a1a; color: #fff; text-align: center; padding: 12px; border-radius: 5px; text-decoration: none; font-size: 12px; font-weight: bold; }
+
         .brand-logos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 15px; align-items: center; }
         .brand-logos img { width: 100%; height: 40px; object-fit: contain; }
 
@@ -72,8 +75,14 @@
 
         <div class="block">
             <div class="section-header" id="aud-header">¿Quiénes me siguen?</div>
-            <div class="feature-card" id="aud-body">
-                Tengo una comunidad muy real y activa (el 62% tiene entre 25 y 44 años). Aunque mi base fuerte está en Puerto Rico (70%), tengo un 22% de seguidores en EE.UU. y comunidades creciendo en LatAm. No solo busco números; busco que las marcas conecten con gente que realmente puede viajar y disfrutar de sus experiencias.
+            <div class="feature-card" id="aud-body">Tengo una comunidad muy real y activa (el 62% tiene entre 25 y 44 años). Aunque mi base fuerte está en Puerto Rico (70%), tengo un 22% de seguidores en EE.UU. y comunidades creciendo en LatAm. No solo busco números; busco que las marcas conecten con gente que realmente puede viajar y disfrutar de sus experiencias.</div>
+        </div>
+
+        <div class="block">
+            <div class="section-header" id="port-header">Video Portafolio (Edición)</div>
+            <div class="video-grid">
+                <a href="https://www.instagram.com/reel/DYf1qunx8bB/" class="video-btn" target="_blank" id="vid-1">Ver Ejemplo: Alojamiento & Estilo</a>
+                <a href="https://www.instagram.com/reel/DHZatNySXkC/" class="video-btn" target="_blank" id="vid-2">Ver Ejemplo: Itinerario de Viaje</a>
             </div>
         </div>
 
@@ -102,3 +111,19 @@
 
         <a href="mailto:jeniceresto.collabs@gmail.com" class="cta-btn" id="cta-btn">TRABAJEMOS JUNTOS</a>
     </div>
+
+    <script>
+        const t = {
+            es: { sub: "VIAJES • GASTRO • EXPERIENCIAS", audH: "¿Quiénes me siguen?", audB: "Tengo una comunidad muy real y activa (el 62% tiene entre 25 y 44 años). Aunque mi base fuerte está en Puerto Rico (70%), tengo un 22% de seguidores en EE.UU. y comunidades creciendo en LatAm. No solo busco números; busco que las marcas conecten con gente que realmente puede viajar y disfrutar de sus experiencias.", vH: "Video Portafolio (Edición)", v1: "Ver Ejemplo: Alojamiento & Estilo", v2: "Ver Ejemplo: Itinerario de Viaje", why: "¿Por qué colaborar conmigo?", f1: "Viralidad Orgánica: El 81% de mi alcance viene de personas que no me siguen, lo que significa que tu marca se expone a gente nueva constantemente.", f2: "Storytelling que vende: No solo saco fotos lindas; cuento la historia de tu lugar para que la gente sienta que NECESITA estar ahí.", enfH: "¿Cómo trabajamos?", enfB: "No me gusta el contenido genérico. Creo piezas 'Plug & Play' (listas para tus redes y ads) con un enfoque narrativo que transforma un lugar en una experiencia aspiracional. Mi meta es que, después de ver mi contenido, el usuario sienta la urgencia de reservar.", gainH: "¿Qué gana tu marca?", gainB: "Vas a tener material profesional de alta calidad que puedes usar por meses, el respaldo de una voz auténtica que genera mucha más confianza que un anuncio tradicional, y exposición directa a viajeros que están listos para gastar y disfrutar.", br: "He tenido el gusto de colaborar con +300 marcas:", cta: "TRABAJEMOS JUNTOS" },
+            en: { sub: "TRAVEL • GASTRO • EXPERIENCES", audH: "Who follows me?", audB: "I have a real, active community (62% are 25-44). While Puerto Rico is my home base (70%), 22% of my followers are in the U.S., with growing communities in LatAm. I don't just care about numbers; I care about brands connecting with people who can actually travel and experience what you offer.", vH: "Video Portfolio (Editing)", v1: "Watch Example: Accommodation & Style", v2: "Watch Example: Travel Itinerary", why: "Why work with me?", f1: "Organic Virality: 81% of my reach comes from non-followers, meaning your brand is constantly in front of new eyes.", f2: "Storytelling that sells: I don't just take pretty pictures; I tell your story so people feel like they NEED to be there.", enfH: "How we work", enfB: "I don't do generic content. I create 'Plug & Play' pieces (ready for your social and ads) with a narrative focus that turns a place into an aspirational experience. My goal is for the user to feel the urgency to book after seeing my content.", gainH: "What does your brand gain?", gainB: "You'll get high-quality professional material to use for months, the backing of an authentic voice that builds more trust than a traditional ad, and direct exposure to travelers ready to spend and enjoy.", br: "I've had the pleasure of collaborating with 300+ brands:", cta: "LET'S WORK TOGETHER" }
+        };
+        function setLang(l) {
+            document.getElementById('subtitle').innerText = t[l].sub;
+            document.getElementById('aud-header').innerText = t[l].audH;
+            document.getElementById('aud-body').innerText = t[l].audB;
+            document.getElementById('port-header').innerText = t[l].vH;
+            document.getElementById('vid-1').innerText = t[l].v1;
+            document.getElementById('vid-2').innerText = t[l].v2;
+            document.getElementById('why-title').innerText = t[l].why;
+            document.getElementById('feat1').innerText = t[l].f1;
+            document.getElementById('feat2').innerText = t[l].f2
