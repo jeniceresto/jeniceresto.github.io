@@ -9,17 +9,19 @@
         
         /* Language Switcher */
         .lang-bar { position: absolute; top: 20px; right: 20px; z-index: 100; }
-        .lang-btn { background: rgba(255,255,255,0.1); border: none; color: white; padding: 5px 10px; border-radius: 5px; cursor: pointer; font-size: 12px; }
+        .lang-btn { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 5px 12px; border-radius: 5px; cursor: pointer; font-size: 12px; transition: 0.3s; }
+        .lang-btn:hover { background: rgba(255,255,255,0.3); }
 
         .hero { position: relative; height: 90vh; width: 100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('IMG_6476.jpeg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
         .profile-pic { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #fff; margin-bottom: 15px; object-fit: cover; }
         h1 { font-size: 32px; letter-spacing: 2px; text-transform: uppercase; margin: 0; }
-        .tagline { font-size: 13px; letter-spacing: 3px; color: #d4af37; margin-top: 10px; margin-bottom: 15px; }
+        .tagline { font-size: 13px; letter-spacing: 3px; color: #d4af37; margin-top: 10px; margin-bottom: 20px; }
 
-        /* Social Bar interactiva */
-        .social-bar { display: flex; gap: 15px; margin-top: 15px; justify-content: center; }
-        .social-link { color: white; text-decoration: none; font-size: 14px; background: rgba(255,255,255,0.15); padding: 10px 20px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s ease; font-weight: 500; display: flex; align-items: center; }
-        .social-link:active { transform: scale(0.95); background: rgba(255,255,255,0.3); }
+        /* Social Bar Premium */
+        .social-bar { display: flex; gap: 15px; margin-top: 10px; justify-content: center; }
+        .social-link { color: #1a1a1a; text-decoration: none; font-size: 14px; background: #ffffff; padding: 12px 25px; border-radius: 30px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(255,255,255,0.3); transition: all 0.3s ease; border: 2px solid #d4af37; }
+        .social-link:hover { background: #d4af37; color: #ffffff; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(212,175,55,0.4); }
+        .social-link:active { transform: scale(0.95); }
 
         .content { background: #FFFFFF; color: #1a1a1a; border-radius: 30px 30px 0 0; margin-top: -50px; position: relative; z-index: 10; padding: 40px 20px; }
         .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 30px; }
@@ -33,7 +35,8 @@
         .brands-text { font-size: 14px; font-weight: 600; color: #333; margin-bottom: 10px; }
         .brand-logos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; align-items: center; margin-top: 20px; opacity: 0.7; }
         .brand-logos img { width: 100%; height: 40px; object-fit: contain; filter: grayscale(100%); }
-        .cta-btn { display: block; background: #1a1a1a; color: #fff; text-align: center; padding: 18px; border-radius: 40px; text-decoration: none; font-weight: bold; margin-top: 40px; }
+        .cta-btn { display: block; background: #1a1a1a; color: #fff; text-align: center; padding: 18px; border-radius: 40px; text-decoration: none; font-weight: bold; margin-top: 40px; transition: 0.3s; }
+        .cta-btn:hover { background: #333; }
     </style>
 </head>
 <body>
@@ -68,12 +71,15 @@
             <div class="stat-card"><div class="stat-val">81%</div><div class="stat-label">New Aud.</div></div>
         </div>
 
+        <h3 id="audience-title">Alcance Internacional</h3>
+        <div class="feature-card">🌎 <div id="audience-text"><b>Audiencia Global:</b> Comunidad activa en Puerto Rico, EE.UU. y mercados internacionales, ideal para colaboraciones estratégicas con hoteles y turismo.</div></div>
+
         <h3 id="why-title">Por qué colaborar conmigo</h3>
-        <div class="feature-card">🚀 <div id="feature1"><b>Viralidad Orgánica:</b> 81% de mi alcance es nuevo público.</div></div>
-        <div class="feature-card">💎 <div id="feature2"><b>Storytelling:</b> Calidad visual que eleva tu marca.</div></div>
+        <div class="feature-card">🚀 <div id="feature1"><b>Viralidad Orgánica:</b> 81% de mi alcance proviene de nuevos seguidores.</div></div>
+        <div class="feature-card">💎 <div id="feature2"><b>Storytelling:</b> Calidad visual profesional que eleva el valor de tu marca.</div></div>
 
         <div class="brands-section">
-            <div class="brands-text" id="brands-text">Más de 300 colaboraciones exitosas.</div>
+            <div class="brands-text" id="brands-text">Más de 300 colaboraciones exitosas con marcas locales e internacionales.</div>
             <div class="brand-logos">
                 <img src="IMG_5686.png"><img src="IMG_6086.png"><img src="IMG_6088.png"><img src="IMG_6093.png">
             </div>
@@ -84,11 +90,13 @@
 
     <script>
         const translations = {
-            es: { subtitle: "VIAJES • GASTRO • EXPERIENCIAS", why: "Por qué colaborar conmigo", f1: "<b>Viralidad Orgánica:</b> 81% de mi alcance es nuevo público.", f2: "<b>Storytelling:</b> Calidad visual que eleva tu marca.", brands: "Más de 300 colaboraciones exitosas.", cta: "TRABAJEMOS JUNTOS" },
-            en: { subtitle: "TRAVEL • GASTRO • EXPERIENCES", why: "Why work with me", f1: "<b>Organic Virality:</b> 81% of my reach is new audience.", f2: "<b>Storytelling:</b> Visual quality that elevates your brand.", brands: "Over 300 successful collaborations.", cta: "LET'S WORK TOGETHER" }
+            es: { subtitle: "VIAJES • GASTRO • EXPERIENCIAS", audTitle: "Alcance Internacional", audText: "<b>Audiencia Global:</b> Comunidad activa en Puerto Rico, EE.UU. y mercados internacionales, ideal para colaboraciones estratégicas con hoteles y turismo.", why: "Por qué colaborar conmigo", f1: "<b>Viralidad Orgánica:</b> 81% de mi alcance proviene de nuevos seguidores.", f2: "<b>Storytelling:</b> Calidad visual profesional que eleva el valor de tu marca.", brands: "Más de 300 colaboraciones exitosas con marcas locales e internacionales.", cta: "TRABAJEMOS JUNTOS" },
+            en: { subtitle: "TRAVEL • GASTRO • EXPERIENCES", audTitle: "International Reach", audText: "<b>Global Audience:</b> Active community in Puerto Rico, the U.S., and international markets, ideal for strategic collaborations with hotels and tourism.", why: "Why work with me", f1: "<b>Organic Virality:</b> 81% of my reach comes from new followers.", f2: "<b>Storytelling:</b> Professional visual quality that elevates your brand value.", brands: "Over 300 successful collaborations with local and international brands.", cta: "LET'S WORK TOGETHER" }
         };
         function setLang(lang) {
             document.getElementById('subtitle').innerText = translations[lang].subtitle;
+            document.getElementById('audience-title').innerText = translations[lang].audTitle;
+            document.getElementById('audience-text').innerHTML = translations[lang].audText;
             document.getElementById('why-title').innerText = translations[lang].why;
             document.getElementById('feature1').innerHTML = translations[lang].f1;
             document.getElementById('feature2').innerHTML = translations[lang].f2;
