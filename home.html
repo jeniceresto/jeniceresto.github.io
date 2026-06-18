@@ -6,7 +6,6 @@
     <title>Jenice Resto | Media Kit</title>
     <style>
         body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; color: #1a1a1a; background-color: #f4f4f4; }
-        
         .lang-bar { position: absolute; top: 20px; right: 20px; z-index: 100; }
         .lang-btn { background: rgba(0,0,0,0.6); border: none; color: white; padding: 5px 12px; border-radius: 5px; cursor: pointer; font-size: 11px; }
 
@@ -30,12 +29,13 @@
         .stat-val { font-size: 16px; font-weight: 800; }
         .stat-label { font-size: 7px; text-transform: uppercase; color: #888; }
 
-        .feature-card { background: #fcfcfc; border-left: 3px solid #d4af37; padding: 15px; margin-bottom: 10px; font-size: 13px; line-height: 1.5; }
-        
-        /* Video Portfolio Section */
-        .video-grid { display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 15px; }
-        .video-btn { display: block; background: #1a1a1a; color: #fff; text-align: center; padding: 12px; border-radius: 5px; text-decoration: none; font-size: 12px; font-weight: bold; }
+        /* Video Buttons - Estilo llamativo */
+        .video-grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 15px; }
+        .video-btn { display: block; background: #d4af37; color: #1a1a1a; text-align: center; padding: 15px; border-radius: 5px; text-decoration: none; font-size: 13px; font-weight: bold; border: 2px solid #d4af37; transition: 0.3s; }
+        .video-btn:hover { background: #1a1a1a; color: #d4af37; }
 
+        .feature-card { background: #fcfcfc; border-left: 3px solid #d4af37; padding: 15px; margin-bottom: 10px; font-size: 13px; line-height: 1.5; }
+        .brands-section { text-align: center; margin-top: 20px; }
         .brand-logos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 15px; align-items: center; }
         .brand-logos img { width: 100%; height: 40px; object-fit: contain; }
 
@@ -74,36 +74,41 @@
         </div>
 
         <div class="block">
+            <div class="section-header" id="results-header">Resultados Recientes</div>
+            <div class="feature-card" id="results-body">Mis Reels generan impacto real: uno de mis contenidos recientes alcanzó las <b>107K vistas</b> con una alta tasa de guardados, demostrando que mi audiencia no solo mira, sino que toma acción.</div>
+        </div>
+
+        <div class="block">
             <div class="section-header" id="aud-header">¿Quiénes me siguen?</div>
-            <div class="feature-card" id="aud-body">Tengo una comunidad muy real y activa (el 62% tiene entre 25 y 44 años). Aunque mi base fuerte está en Puerto Rico (70%), tengo un 22% de seguidores en EE.UU. y comunidades creciendo en LatAm. No solo busco números; busco que las marcas conecten con gente que realmente puede viajar y disfrutar de sus experiencias.</div>
+            <div class="feature-card" id="aud-body">Tengo una comunidad muy real y activa (62% entre 25-44 años). Aunque mi base fuerte está en Puerto Rico (70%), tengo un 22% de seguidores en EE.UU. y comunidades creciendo en LatAm. No busco números; busco que las marcas conecten con gente que realmente puede viajar y disfrutar de sus experiencias.</div>
         </div>
 
         <div class="block">
             <div class="section-header" id="port-header">Video Portafolio (Edición)</div>
             <div class="video-grid">
-                <a href="https://www.instagram.com/reel/DYf1qunx8bB/" class="video-btn" target="_blank" id="vid-1">Ver Ejemplo: Alojamiento & Estilo</a>
-                <a href="https://www.instagram.com/reel/DHZatNySXkC/" class="video-btn" target="_blank" id="vid-2">Ver Ejemplo: Itinerario de Viaje</a>
+                <a href="https://www.instagram.com/reel/DYf1qunx8bB/" class="video-btn" target="_blank" id="vid-1">► VER EJEMPLO: ALOJAMIENTO</a>
+                <a href="https://www.instagram.com/reel/DHZatNySXkC/" class="video-btn" target="_blank" id="vid-2">► VER EJEMPLO: ITINERARIO</a>
             </div>
         </div>
 
         <div class="block">
             <div class="section-header" id="why-title">¿Por qué colaborar conmigo?</div>
-            <div class="feature-card" id="feat1">Viralidad Orgánica: El 81% de mi alcance viene de personas que no me siguen, lo que significa que tu marca se expone a gente nueva constantemente.</div>
-            <div class="feature-card" id="feat2">Storytelling que vende: No solo saco fotos lindas; cuento la historia de tu lugar para que la gente sienta que NECESITA estar ahí.</div>
+            <div class="feature-card" id="feat1"><b>Viralidad Orgánica:</b> El 81% de mi alcance viene de personas que no me siguen, exponiendo tu marca a ojos nuevos constantemente.</div>
+            <div class="feature-card" id="feat2"><b>Storytelling que vende:</b> No solo saco fotos lindas; cuento la historia de tu lugar para que la gente sienta que NECESITA estar ahí.</div>
         </div>
 
         <div class="block">
             <div class="section-header" id="enf-title">¿Cómo trabajamos?</div>
-            <div class="feature-card" id="enf-body">No me gusta el contenido genérico. Creo piezas "Plug & Play" (listas para tus redes y ads) con un enfoque narrativo que transforma un lugar en una experiencia aspiracional. Mi meta es que, después de ver mi contenido, el usuario sienta la urgencia de reservar.</div>
+            <div class="feature-card" id="enf-body">No hago contenido genérico. Creo piezas "Plug & Play" (listas para tus redes y ads) con un enfoque narrativo que transforma un lugar en una experiencia aspiracional. Mi meta es que, tras ver mi video, el usuario sienta la urgencia de reservar.</div>
         </div>
 
         <div class="block">
-            <div class="section-header" id="gain-title">¿Qué gana tu marca?</div>
-            <div class="feature-card" id="gain-body">Vas a tener material profesional de alta calidad que puedes usar por meses, el respaldo de una voz auténtica que genera mucha más confianza que un anuncio tradicional, y exposición directa a viajeros que están listos para gastar y disfrutar.</div>
+            <div class="section-header" id="gain-title">¿Qué gana su marca?</div>
+            <div class="feature-card" id="gain-body">Material profesional de alta calidad utilizable por meses, el respaldo de una voz auténtica que genera mucha más confianza que un anuncio tradicional, y exposición directa a viajeros listos para gastar y disfrutar.</div>
         </div>
 
         <div class="brands-section">
-            <div id="brands-text" style="font-size: 11px; color: #888;">He tenido el gusto de colaborar con +300 marcas:</div>
+            <div id="brands-text" style="font-size: 11px; color: #888;">Marcas con las que he colaborado:</div>
             <div class="brand-logos">
                 <img src="IMG_5686.png"><img src="IMG_6086.png"><img src="IMG_6088.png"><img src="IMG_6093.png">
             </div>
@@ -114,16 +119,28 @@
 
     <script>
         const t = {
-            es: { sub: "VIAJES • GASTRO • EXPERIENCIAS", audH: "¿Quiénes me siguen?", audB: "Tengo una comunidad muy real y activa (el 62% tiene entre 25 y 44 años). Aunque mi base fuerte está en Puerto Rico (70%), tengo un 22% de seguidores en EE.UU. y comunidades creciendo en LatAm. No solo busco números; busco que las marcas conecten con gente que realmente puede viajar y disfrutar de sus experiencias.", vH: "Video Portafolio (Edición)", v1: "Ver Ejemplo: Alojamiento & Estilo", v2: "Ver Ejemplo: Itinerario de Viaje", why: "¿Por qué colaborar conmigo?", f1: "Viralidad Orgánica: El 81% de mi alcance viene de personas que no me siguen, lo que significa que tu marca se expone a gente nueva constantemente.", f2: "Storytelling que vende: No solo saco fotos lindas; cuento la historia de tu lugar para que la gente sienta que NECESITA estar ahí.", enfH: "¿Cómo trabajamos?", enfB: "No me gusta el contenido genérico. Creo piezas 'Plug & Play' (listas para tus redes y ads) con un enfoque narrativo que transforma un lugar en una experiencia aspiracional. Mi meta es que, después de ver mi contenido, el usuario sienta la urgencia de reservar.", gainH: "¿Qué gana tu marca?", gainB: "Vas a tener material profesional de alta calidad que puedes usar por meses, el respaldo de una voz auténtica que genera mucha más confianza que un anuncio tradicional, y exposición directa a viajeros que están listos para gastar y disfrutar.", br: "He tenido el gusto de colaborar con +300 marcas:", cta: "TRABAJEMOS JUNTOS" },
-            en: { sub: "TRAVEL • GASTRO • EXPERIENCES", audH: "Who follows me?", audB: "I have a real, active community (62% are 25-44). While Puerto Rico is my home base (70%), 22% of my followers are in the U.S., with growing communities in LatAm. I don't just care about numbers; I care about brands connecting with people who can actually travel and experience what you offer.", vH: "Video Portfolio (Editing)", v1: "Watch Example: Accommodation & Style", v2: "Watch Example: Travel Itinerary", why: "Why work with me?", f1: "Organic Virality: 81% of my reach comes from non-followers, meaning your brand is constantly in front of new eyes.", f2: "Storytelling that sells: I don't just take pretty pictures; I tell your story so people feel like they NEED to be there.", enfH: "How we work", enfB: "I don't do generic content. I create 'Plug & Play' pieces (ready for your social and ads) with a narrative focus that turns a place into an aspirational experience. My goal is for the user to feel the urgency to book after seeing my content.", gainH: "What does your brand gain?", gainB: "You'll get high-quality professional material to use for months, the backing of an authentic voice that builds more trust than a traditional ad, and direct exposure to travelers ready to spend and enjoy.", br: "I've had the pleasure of collaborating with 300+ brands:", cta: "LET'S WORK TOGETHER" }
+            es: { sub: "VIAJES • GASTRO • EXPERIENCIAS", resH: "Resultados Recientes", resB: "Mis Reels generan impacto real: uno de mis contenidos recientes alcanzó las <b>107K vistas</b> con una alta tasa de guardados, demostrando que mi audiencia no solo mira, sino que toma acción.", audH: "¿Quiénes me siguen?", audB: "Tengo una comunidad muy real y activa (62% entre 25-44 años). Aunque mi base fuerte está en Puerto Rico (70%), tengo un 22% de seguidores en EE.UU. y comunidades creciendo en LatAm. No solo busco números; busco que las marcas conecten con gente que realmente puede viajar y disfrutar de sus experiencias.", vH: "Video Portafolio (Edición)", v1: "► VER EJEMPLO: ALOJAMIENTO", v2: "► VER EJEMPLO: ITINERARIO", why: "¿Por qué colaborar conmigo?", f1: "<b>Viralidad Orgánica:</b> El 81% de mi alcance viene de personas que no me siguen, exponiendo tu marca a ojos nuevos constantemente.", f2: "<b>Storytelling que vende:</b> No solo saco fotos lindas; cuento la historia de tu lugar para que la gente sienta que NECESITA estar ahí.", enfH: "¿Cómo trabajamos?", enfB: "No hago contenido genérico. Creo piezas 'Plug & Play' (listas para tus redes y ads) con un enfoque narrativo que transforma un lugar en una experiencia aspiracional. Mi meta es que, tras ver mi video, el usuario sienta la urgencia de reservar.", gainH: "¿Qué gana su marca?", gainB: "Material profesional de alta calidad utilizable por meses, el respaldo de una voz auténtica que genera mucha más confianza que un anuncio tradicional, y exposición directa a viajeros listos para gastar y disfrutar.", br: "Marcas con las que he colaborado:", cta: "TRABAJEMOS JUNTOS" },
+            en: { sub: "TRAVEL • GASTRO • EXPERIENCES", resH: "Recent Results", resB: "My Reels generate real impact: one of my recent contents reached <b>107K views</b> with a high save rate, proving my audience doesn't just watch—they take action.", audH: "Who follows me?", audB: "I have a real, active community (62% are 25-44). While Puerto Rico is my home base (70%), 22% are in the U.S., with growing communities in LatAm. I don't just care about numbers; I care about brands connecting with people who can actually travel and experience what you offer.", vH: "Video Portfolio (Editing)", v1: "► WATCH EXAMPLE: ACCOMMODATION", v2: "► WATCH EXAMPLE: ITINERARY", why: "Why work with me?", f1: "<b>Organic Virality:</b> 81% of my reach comes from non-followers, exposing your brand to new eyes constantly.", f2: "<b>Storytelling that sells:</b> I don't just take pretty pictures; I tell your story so people feel like they NEED to be there.", enfH: "How we work", enfB: "I don't do generic content. I create 'Plug & Play' pieces (ready for your social and ads) with a narrative focus that turns a place into an aspirational experience. My goal is for the user to feel the urgency to book after seeing my content.", gainH: "What does your brand gain?", gainB: "High-quality professional assets you can use for months, the backing of an authentic voice that builds more trust than a traditional ad, and direct exposure to travelers ready to spend and enjoy.", br: "Brands I've collaborated with:", cta: "LET'S WORK TOGETHER" }
         };
         function setLang(l) {
             document.getElementById('subtitle').innerText = t[l].sub;
+            document.getElementById('results-header').innerText = t[l].resH;
+            document.getElementById('results-body').innerHTML = t[l].resB;
             document.getElementById('aud-header').innerText = t[l].audH;
             document.getElementById('aud-body').innerText = t[l].audB;
             document.getElementById('port-header').innerText = t[l].vH;
             document.getElementById('vid-1').innerText = t[l].v1;
             document.getElementById('vid-2').innerText = t[l].v2;
             document.getElementById('why-title').innerText = t[l].why;
-            document.getElementById('feat1').innerText = t[l].f1;
-            document.getElementById('feat2').innerText = t[l].f2
+            document.getElementById('feat1').innerHTML = t[l].f1;
+            document.getElementById('feat2').innerHTML = t[l].f2;
+            document.getElementById('enf-title').innerText = t[l].enfH;
+            document.getElementById('enf-body').innerText = t[l].enfB;
+            document.getElementById('gain-title').innerText = t[l].gainH;
+            document.getElementById('gain-body').innerText = t[l].gainB;
+            document.getElementById('brands-text').innerText = t[l].br;
+            document.getElementById('cta-btn').innerText = t[l].cta;
+        }
+    </script>
+</body>
+</html>
