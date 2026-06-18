@@ -7,41 +7,46 @@
     <style>
         body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; color: #FFFFFF; background-color: #1a1a1a; }
         
+        /* Language Switcher */
+        .lang-bar { position: absolute; top: 20px; right: 20px; z-index: 100; }
+        .lang-btn { background: rgba(255,255,255,0.1); border: none; color: white; padding: 5px 10px; border-radius: 5px; cursor: pointer; font-size: 12px; }
+
         .hero { position: relative; height: 90vh; width: 100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('IMG_6476.jpeg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
         .profile-pic { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #fff; margin-bottom: 15px; object-fit: cover; }
         h1 { font-size: 32px; letter-spacing: 2px; text-transform: uppercase; margin: 0; }
         .tagline { font-size: 13px; letter-spacing: 3px; color: #d4af37; margin-top: 10px; margin-bottom: 15px; }
 
-        .social-bar { display: flex; gap: 15px; margin-top: 10px; }
-        .social-link { color: white; text-decoration: none; font-size: 14px; background: rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 20px; transition: 0.3s; }
-        .social-link:hover { background: rgba(255,255,255,0.2); }
+        /* Social Bar interactiva */
+        .social-bar { display: flex; gap: 15px; margin-top: 15px; justify-content: center; }
+        .social-link { color: white; text-decoration: none; font-size: 14px; background: rgba(255,255,255,0.15); padding: 10px 20px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s ease; font-weight: 500; display: flex; align-items: center; }
+        .social-link:active { transform: scale(0.95); background: rgba(255,255,255,0.3); }
 
         .content { background: #FFFFFF; color: #1a1a1a; border-radius: 30px 30px 0 0; margin-top: -50px; position: relative; z-index: 10; padding: 40px 20px; }
-        
         .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 30px; }
         .gallery-grid img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; }
-
         .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 40px; }
         .stat-card { background: #F9F7F5; padding: 15px 5px; border-radius: 15px; text-align: center; border: 1px solid #EEE; }
         .stat-val { font-size: 18px; font-weight: 800; }
         .stat-label { font-size: 8px; text-transform: uppercase; color: #A67C52; margin-top: 5px; }
-
         .feature-card { background: #fff; padding: 20px; border-radius: 15px; margin-bottom: 15px; border: 1px solid #F0F0F0; display: flex; align-items: center; gap: 15px; }
-        
         .brands-section { margin-top: 40px; text-align: center; }
         .brands-text { font-size: 14px; font-weight: 600; color: #333; margin-bottom: 10px; }
         .brand-logos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; align-items: center; margin-top: 20px; opacity: 0.7; }
         .brand-logos img { width: 100%; height: 40px; object-fit: contain; filter: grayscale(100%); }
-
         .cta-btn { display: block; background: #1a1a1a; color: #fff; text-align: center; padding: 18px; border-radius: 40px; text-decoration: none; font-weight: bold; margin-top: 40px; }
     </style>
 </head>
 <body>
 
+    <div class="lang-bar">
+        <button class="lang-btn" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+
     <div class="hero">
         <img src="IMG_5775.png" class="profile-pic">
-        <h1>Jenice Resto</h1>
-        <div class="tagline">VIAJES • GASTRO • EXPERIENCIAS</div>
+        <h1 id="title">Jenice Resto</h1>
+        <div class="tagline" id="subtitle">VIAJES • GASTRO • EXPERIENCIAS</div>
         
         <div class="social-bar">
             <a href="https://instagram.com/jeniceresto" class="social-link" target="_blank">IG: 25.8K</a>
@@ -58,26 +63,38 @@
         </div>
 
         <div class="stats-grid">
-            <div class="stat-card"><div class="stat-val">500K</div><div class="stat-label">Reach Único</div></div>
-            <div class="stat-card"><div class="stat-val">2.0M</div><div class="stat-label">Impression</div></div>
+            <div class="stat-card"><div class="stat-val">500K</div><div class="stat-label">Reach</div></div>
+            <div class="stat-card"><div class="stat-val">2.0M</div><div class="stat-label">Impressions</div></div>
             <div class="stat-card"><div class="stat-val">81%</div><div class="stat-label">New Aud.</div></div>
         </div>
 
-        <h3 style="margin-bottom: 20px;">Por qué colaborar conmigo</h3>
-        <div class="feature-card">🚀 <div><b>Viralidad Orgánica:</b> 81% de mi alcance es nuevo público.</div></div>
-        <div class="feature-card">💎 <div><b>Storytelling:</b> Calidad visual que eleva tu marca.</div></div>
+        <h3 id="why-title">Por qué colaborar conmigo</h3>
+        <div class="feature-card">🚀 <div id="feature1"><b>Viralidad Orgánica:</b> 81% de mi alcance es nuevo público.</div></div>
+        <div class="feature-card">💎 <div id="feature2"><b>Storytelling:</b> Calidad visual que eleva tu marca.</div></div>
 
         <div class="brands-section">
-            <div class="brands-text">Más de 300 colaboraciones exitosas con marcas locales e internacionales.</div>
+            <div class="brands-text" id="brands-text">Más de 300 colaboraciones exitosas.</div>
             <div class="brand-logos">
-                <img src="IMG_5686.png">
-                <img src="IMG_6086.png">
-                <img src="IMG_6088.png">
-                <img src="IMG_6093.png">
+                <img src="IMG_5686.png"><img src="IMG_6086.png"><img src="IMG_6088.png"><img src="IMG_6093.png">
             </div>
         </div>
 
-        <a href="mailto:jeniceresto.collabs@gmail.com" class="cta-btn">TRABAJEMOS JUNTOS</a>
+        <a href="mailto:jeniceresto.collabs@gmail.com" class="cta-btn" id="cta-btn">TRABAJEMOS JUNTOS</a>
     </div>
+
+    <script>
+        const translations = {
+            es: { subtitle: "VIAJES • GASTRO • EXPERIENCIAS", why: "Por qué colaborar conmigo", f1: "<b>Viralidad Orgánica:</b> 81% de mi alcance es nuevo público.", f2: "<b>Storytelling:</b> Calidad visual que eleva tu marca.", brands: "Más de 300 colaboraciones exitosas.", cta: "TRABAJEMOS JUNTOS" },
+            en: { subtitle: "TRAVEL • GASTRO • EXPERIENCES", why: "Why work with me", f1: "<b>Organic Virality:</b> 81% of my reach is new audience.", f2: "<b>Storytelling:</b> Visual quality that elevates your brand.", brands: "Over 300 successful collaborations.", cta: "LET'S WORK TOGETHER" }
+        };
+        function setLang(lang) {
+            document.getElementById('subtitle').innerText = translations[lang].subtitle;
+            document.getElementById('why-title').innerText = translations[lang].why;
+            document.getElementById('feature1').innerHTML = translations[lang].f1;
+            document.getElementById('feature2').innerHTML = translations[lang].f2;
+            document.getElementById('brands-text').innerText = translations[lang].brands;
+            document.getElementById('cta-btn').innerText = translations[lang].cta;
+        }
+    </script>
 </body>
 </html>
