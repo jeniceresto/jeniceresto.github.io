@@ -5,24 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jenice Resto | Media Kit</title>
     <style>
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; color: #FFFFFF; background-color: #1a1a1a; }
-        .hero { position: relative; height: 80vh; width: 100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('IMG_6476.jpeg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
-        .profile-pic { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #fff; margin-bottom: 15px; object-fit: cover; }
-        h1 { font-size: 28px; letter-spacing: 2px; text-transform: uppercase; margin: 0; }
-        .tagline { font-size: 12px; letter-spacing: 3px; color: #d4af37; margin-bottom: 20px; }
-
-        /* Social Bar */
-        .social-bar { display: flex; gap: 10px; margin-bottom: 20px; }
-        .social-link { color: #1a1a1a; background: #ffffff; padding: 8px 20px; border-radius: 20px; font-weight: bold; font-size: 12px; text-decoration: none; border: 2px solid #d4af37; }
-
-        .content { background: #FFFFFF; color: #1a1a1a; border-radius: 30px 30px 0 0; margin-top: -40px; padding: 30px 20px; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; color: #FFFFFF; background-color: #1a1a1a; }
         
-        /* Sección Estratégica */
-        .strategy-card { background: #fcfcfc; border: 1px solid #eee; padding: 20px; border-radius: 15px; margin-bottom: 20px; }
-        .section-header { font-weight: bold; display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 16px; color: #d4af37; }
-        .list-item { display: flex; gap: 10px; margin-bottom: 10px; font-size: 13px; line-height: 1.5; }
+        .hero { position: relative; height: 90vh; width: 100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('IMG_6476.jpeg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
+        .profile-pic { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #fff; margin-bottom: 15px; object-fit: cover; }
+        h1 { font-size: 32px; letter-spacing: 2px; text-transform: uppercase; margin: 0; }
+        .tagline { font-size: 13px; letter-spacing: 3px; color: #d4af37; margin-top: 10px; margin-bottom: 20px; }
 
-        .cta-btn { display: block; background: #1a1a1a; color: #fff; text-align: center; padding: 15px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 20px; }
+        .social-bar { display: flex; gap: 15px; margin-top: 10px; justify-content: center; }
+        .social-link { color: #1a1a1a; text-decoration: none; font-size: 13px; background: #ffffff; padding: 12px 25px; border-radius: 30px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease; border: 2px solid #d4af37; }
+        .social-link:hover { background: #d4af37; color: #ffffff; transform: translateY(-3px); }
+
+        .content { background: #FFFFFF; color: #1a1a1a; border-radius: 30px 30px 0 0; margin-top: -50px; position: relative; z-index: 10; padding: 40px 20px; }
+        
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 30px; }
+        .gallery-grid img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; }
+
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 40px; }
+        .stat-card { background: #F9F7F5; padding: 15px 5px; border-radius: 15px; text-align: center; border: 1px solid #EEE; }
+        .stat-val { font-size: 18px; font-weight: 800; }
+        .stat-label { font-size: 8px; text-transform: uppercase; color: #A67C52; margin-top: 5px; letter-spacing: 1px; }
+
+        .section-title { font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin: 30px 0 15px; color: #1a1a1a; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .card-elegant { margin-bottom: 25px; }
+        .card-elegant b { display: block; margin-bottom: 5px; font-size: 14px; color: #000; }
+        .card-elegant p { font-size: 13px; color: #555; line-height: 1.6; margin: 0 0 10px 0; }
+
+        .cta-btn { display: block; background: #1a1a1a; color: #fff; text-align: center; padding: 18px; border-radius: 40px; text-decoration: none; font-weight: bold; margin-top: 40px; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; }
     </style>
 </head>
 <body>
@@ -30,27 +39,40 @@
     <div class="hero">
         <img src="IMG_5775.png" class="profile-pic">
         <h1>Jenice Resto</h1>
-        <div class="tagline">TRAVEL • GASTRO • EXPERIENCES</div>
+        <div class="tagline">VIAJES • GASTRO • EXPERIENCIAS</div>
         <div class="social-bar">
-            <a href="https://instagram.com/jeniceresto" class="social-link">IG 25.8K</a>
-            <a href="https://tiktok.com/@jeniceresto" class="social-link">TIKTOK 23K</a>
+            <a href="https://instagram.com/jeniceresto" class="social-link" target="_blank">IG 25.8K</a>
+            <a href="https://tiktok.com/@jeniceresto" class="social-link" target="_blank">TIKTOK 23K</a>
         </div>
     </div>
 
     <div class="content">
-        <div class="strategy-card">
-            <div class="section-header"><span>⚡</span> Mi Enfoque de Colaboración</div>
-            <div class="list-item">✅ <b>Contenido "Plug & Play":</b> Videos verticales optimizados, listos para publicar.</div>
-            <div class="list-item">📖 <b>Narrativa de Experiencia:</b> Cuento la historia detrás de tu marca para conectar emocionalmente.</div>
-            <div class="list-item">🎬 <b>Derechos de Uso:</b> Material de alta calidad para tu publicidad pagada.</div>
+        <div class="gallery-grid">
+            <img src="dji_fly_20260606_134706_52_1780768211388_photo.jpeg">
+            <img src="IMG_5332.jpeg">
+            <img src="IMG_9832.jpeg">
+            <img src="IMG_8966.jpeg">
         </div>
 
-        <div class="strategy-card">
-            <div class="section-header"><span>🎯</span> ¿Qué gana tu marca?</div>
-            <div class="list-item">📈 <b>Diseñado para la acción:</b> Contenido enfocado en generar interés y tráfico a tus reservas.</div>
-            <div class="list-item">🗓️ <b>Contenido Evergreen:</b> Recibes material profesional utilizable por meses.</div>
-            <div class="list-item">🌐 <b>Nuevos Mercados:</b> Expongo tu marca ante una audiencia activa en EE.UU. y LatAm.</div>
-            <div class="list-item">🤝 <b>Validación Real:</b> Una voz auténtica que genera mucha más confianza que un anuncio tradicional.</div>
+        <div class="stats-grid">
+            <div class="stat-card"><div class="stat-val">500K</div><div class="stat-label">Reach</div></div>
+            <div class="stat-card"><div class="stat-val">2.0M</div><div class="stat-label">Impression</div></div>
+            <div class="stat-card"><div class="stat-val">81%</div><div class="stat-label">New Aud.</div></div>
+        </div>
+
+        <div class="section-title">Enfoque de Colaboración</div>
+        <div class="card-elegant">
+            <p>Mi metodología se centra en contenido optimizado para plataformas digitales, combinando una narrativa auténtica que conecta emocionalmente con el consumidor, transformando cada experiencia en tráfico directo y conversiones reales para su marca.</p>
+        </div>
+
+        <div class="section-title">¿Qué gana su marca?</div>
+        <div class="card-elegant">
+            <b>Contenido "Plug & Play"</b>
+            <p>Material visual de alta calidad, diseñado específicamente para integrarse en sus campañas publicitarias y redes sociales actuales.</p>
+            <b>Alcance a Nuevos Mercados</b>
+            <p>Exposición ante una audiencia activa en Puerto Rico y mercados internacionales de alto poder adquisitivo, ideal para el sector turístico y hotelero.</p>
+            <b>Validación y Confianza</b>
+            <p>Generación de credibilidad a través de una voz auténtica, la cual convierte significativamente más que la publicidad tradicional.</p>
         </div>
 
         <a href="mailto:jeniceresto.collabs@gmail.com" class="cta-btn">TRABAJEMOS JUNTOS</a>
