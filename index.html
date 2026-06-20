@@ -5,150 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jenice Resto | Media Kit</title>
     <style>
-        body { margin: 0; font-family: Arial, sans-serif; background: #ffffff; color: #222; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; color: #1a1a1a; background-color: #f4f4f4; }
         
-        /* Selector de Idioma */
-        .lang-switch { position: absolute; top: 20px; right: 20px; display: flex; gap: 5px; z-index: 10; }
-        .lang-switch button { background: white; border: 1px solid #ccc; padding: 6px 12px; font-weight: bold; cursor: pointer; border-radius: 4px; font-size: 14px; }
-        .lang-switch button.active { background: #0056b3; color: white; border-color: #0056b3; }
-        
-        header { background: #cfe8ff; padding: 60px 20px; text-align: center; position: relative; }
-        
-        /* Foto de perfil (Grande) y Logo (Pequeño) */
-        .profile-pic { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .brand-logo-small { max-width: 90px; height: auto; margin-top: 20px; object-fit: contain; }
-        
-        header h1 { font-size: 40px; margin: 0; color: #1a1a1a; }
-        header p { font-size: 18px; max-width: 700px; margin: 10px auto 0; color: #444; }
-        section { padding: 50px 20px; max-width: 900px; margin: auto; }
-        h2 { font-size: 32px; margin-bottom: 20px; color: #1a1a1a; border-bottom: 2px solid #cfe8ff; padding-bottom: 10px; }
-        .dual { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
-        .dual div { flex: 1; min-width: 280px; }
-        .stats-box, .package-box { background: #f7f7f7; padding: 25px; border-radius: 8px; text-align: center; box-sizing: border-box; }
-        .stats-box h3 { font-size: 32px; color: #0056b3; margin: 0 0 10px 0; }
-        .package-box { text-align: left; border: 1px solid #e0e0e0; }
-        .package-box h4 { font-size: 20px; margin-top: 0; color: #1a1a1a; }
-        .package-box p { font-size: 15px; color: #555; line-height: 1.5; margin: 0; }
-        .btn { display: inline-block; background: #0056b3; color: white; padding: 14px 28px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; font-size: 16px; }
-        .btn:hover { background: #004494; }
-        .destacado { background: #fff9e6; border-left: 4px solid #ffcc00; padding: 15px; margin-top: 20px; border-radius: 0 4px 4px 0; font-size: 15px; line-height: 1.6; }
-        
-        .brand-intro { text-align: center; font-size: 18px; color: #444; margin-bottom: 30px; }
-        .brands-grid { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; align-items: center; margin-top: 20px; }
-        .brands-grid img { max-width: 130px; height: auto; object-fit: contain; }
-        footer { text-align: center; padding: 50px 20px; background: #f1f1f1; color: #222; }
+        .lang-bar { position: absolute; top: 20px; right: 20px; z-index: 100; }
+        .lang-btn { background: rgba(0,0,0,0.6); border: none; color: white; padding: 5px 12px; border-radius: 5px; cursor: pointer; font-size: 11px; }
 
-        /* Control de visibilidad de idiomas */
-        body.lang-en .lang-es { display: none !important; }
-        body.lang-es .lang-en { display: none !important; }
+        .hero { position: relative; height: 80vh; width: 100%; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('IMG_6476.jpeg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; }
+        .profile-pic { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #fff; margin-bottom: 10px; object-fit: cover; }
+        h1 { font-size: 28px; letter-spacing: 2px; text-transform: uppercase; margin: 0; }
+        .tagline { font-size: 12px; letter-spacing: 3px; color: #d4af37; margin-top: 5px; }
+
+        .social-bar { display: flex; gap: 10px; margin-top: 20px; justify-content: center; }
+        .social-link { color: #fff; text-decoration: none; font-size: 11px; background: #1a1a1a; padding: 10px 20px; border-radius: 20px; font-weight: 700; text-transform: uppercase; border: 1px solid #d4af37; }
+
+        .content { padding: 30px 20px; background: #fff; }
+        .block { margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        .section-header { font-size: 16px; font-weight: 800; text-transform: uppercase; color: #d4af37; margin-bottom: 15px; letter-spacing: 1px; }
+        
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 30px; }
+        .gallery-grid img { width: 100%; height: 160px; object-fit: cover; border-radius: 8px; }
+
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 30px; }
+        .stat-card { background: #f8f8f8; padding: 15px 5px; border-radius: 10px; text-align: center; }
+        .stat-val { font-size: 16px; font-weight: 800; }
+        .stat-label { font-size: 7px; text-transform: uppercase; color: #888; }
+
+        .audience-box { background: #1a1a1a; color: #fff; padding: 20px; border-radius: 15px; font-size: 13px; line-height: 1.6; }
+        .highlight { color: #d4af37; font-weight: bold; }
+
+        .feature-card { background: #fcfcfc; border-left: 3px solid #d4af37; padding: 15px; margin-bottom: 10px; font-size: 13px; line-height: 1.5; }
+        
+        .video-grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 15px; }
+        .video-btn { display: block; background: #d4af37; color: #1a1a1a; text-align: center; padding: 15px; border-radius: 5px; text-decoration: none; font-size: 13px; font-weight: bold; border: 2px solid #d4af37; transition: 0.3s; }
+        .video-btn:hover { background: #1a1a1a; color: #d4af37; }
+
+        .brands-section { text-align: center; margin-top: 20px; }
+        .brand-logos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 15px; align-items: center; }
+        .brand-logos img { width: 100%; height: 40px; object-fit: contain; }
+
+        .cta-btn { display: block; background: #d4af37; color: #1a1a1a; text-align: center; padding: 15px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 30px; text-transform: uppercase; font-size: 13px; }
     </style>
 </head>
-<body class="lang-es">
+<body>
 
-    <div class="lang-switch">
-        <button id="btn-es" class="active" onclick="changeLang('es')">ES</button>
-        <button id="btn-en" onclick="changeLang('en')">EN</button>
+    <div class="lang-bar">
+        <button class="lang-btn" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
     </div>
 
-    <header>
-        <img src="IMG_8980.jpeg" alt="Jenice Resto" class="profile-pic">
-        <h1>Jenice Resto</h1>
-        <p class="lang-es">Creadora de Contenido | Viajes, Alojamientos, Restaurantes, Experiencias, Marcas y más</p>
-        <p class="lang-en">Content Creator | Travel, Stays, Restaurants, Experiences, Brands & more</p>
-        <img src="IMG_5775.png" alt="Logo Jenice Resto" class="brand-logo-small">
-    </header>
+    <div class="hero">
+        <img src="IMG_5775.png" class="profile-pic">
+        <h1 id="title">Jenice Resto</h1>
+        <div class="tagline" id="subtitle">VIAJES • GASTRO • EXPERIENCIAS</div>
+        <div class="social-bar">
+            <a href="https://instagram.com/jeniceresto" class="social-link" target="_blank">IG 25.8K</a>
+            <a href="https://tiktok.com/@jeniceresto" class="social-link" target="_blank">TIKTOK 23K</a>
+        </div>
+    </div>
 
-    <section>
-        <h2 class="lang-es">Sobre Mí</h2>
-        <h2 class="lang-en">About Me</h2>
-        <p class="lang-es" style="font-size: 16px; line-height: 1.6; color: #333;">
-            ¡Hola! Me dedico a explorar y compartir lo mejor en viajes, estadías, gastronomía, marcas y aventuras locales. Mi objetivo es conectar a mi comunidad con experiencias reales y espacios increíbles, creando contenido visualmente estético y dinámico que resalte la esencia única de cada proyecto.
-        </p>
-        <p class="lang-en" style="font-size: 16px; line-height: 1.6; color: #333;">
-            Hi! I specialize in exploring and sharing the best in travel, stays, gastronomy, brands, and local adventures. My goal is to connect my community with authentic experiences and incredible spaces, creating visually aesthetic and dynamic content that highlights the unique essence of each project.
-        </p>
-    </section>
+    <div class="content">
+        <div class="gallery-grid">
+            <img src="dji_fly_20260606_134706_52_1780768211388_photo.jpeg">
+            <img src="IMG_5332.jpeg">
+            <img src="IMG_9832.jpeg">
+            <img src="IMG_8966.jpeg">
+        </div>
 
-    <section>
-        <h2 class="lang-es">Mi Comunidad e Impacto</h2>
-        <h2 class="lang-en">My Community & Impact</h2>
-        <div class="dual">
-            <div class="stats-box">
-                <h3>25K</h3>
-                <p style="margin: 0; font-weight: bold;">Instagram</p>
-            </div>
-            <div class="stats-box">
-                <h3>22K</h3>
-                <p style="margin: 0; font-weight: bold;">TikTok</p>
-            </div>
-            <div class="stats-box" style="background: #e6f2ff; border: 1px solid #cfe8ff;">
-                <h3 style="color: #004494;">800K</h3>
-                <p class="lang-es" style="margin: 0; font-weight: bold; color: #004494;">Cuentas Alcanzadas</p>
-                <p class="lang-en" style="margin: 0; font-weight: bold; color: #004494;">Monthly Reach</p>
+        <div class="stats-grid">
+            <div class="stat-card"><div class="stat-val">500K</div><div class="stat-label">Reach</div></div>
+            <div class="stat-card"><div class="stat-val">2.0M</div><div class="stat-label">Impressions</div></div>
+            <div class="stat-card"><div class="stat-val">81%</div><div class="stat-label">New Aud.</div></div>
+        </div>
+
+        <div class="block">
+            <div class="section-header" id="aud-header">¿Quiénes me siguen?</div>
+            <div class="audience-box" id="aud-body">
+                Tengo una comunidad muy real y activa (el 62% tiene entre 25 y 44 años). Aunque mi base fuerte está en Puerto Rico (70%), tengo un 22% de seguidores en EE.UU. y comunidades creciendo en LatAm. No solo busco números; busco que las marcas conecten con gente que realmente puede viajar y disfrutar de sus experiencias.
             </div>
         </div>
-        <div class="destacado lang-es">
-            <strong>¿Quiénes me ven?</strong> 
-            <p style="margin: 5px 0 0 0;">Una audiencia sumamente activa compuesta en su mayoría por usuarios entre los <strong>25 a 44 años</strong> (hombres 61%, mujeres 39%). El <strong>71% de mi público es de Puerto Rico</strong>, seguido por un 22% de Estados Unidos, lo que me permite un impacto directo en el mercado local y el turismo interno.</p>
-        </div>
-        <div class="destacado lang-en">
-            <strong>Audience Demographics</strong> 
-            <p style="margin: 5px 0 0 0;">A highly active audience primarily composed of users between <strong>25 and 44 years old</strong> (61% men, 39% women). <strong>71% of my audience is located in Puerto Rico</strong>, followed by 22% in the United States, driving direct engagement in local markets and internal tourism.</p>
-        </div>
-    </section>
 
-    <section>
-        <h2 class="lang-es">Marcas con las que he trabajado</h2>
-        <h2 class="lang-en">Brands I've Worked With</h2>
-        <p class="brand-intro lang-es">Más de 300 colaboraciones exitosas con marcas locales e internacionales.</p>
-        <p class="brand-intro lang-en">Over 300 successful collaborations with local and international brands.</p>
-        <div class="brands-grid">
-            <img src="IMG_5686.png" alt="Marca 1">
-            <img src="IMG_6086.png" alt="Marca 2">
-            <img src="IMG_6088.png" alt="Marca 3">
-            <img src="IMG_6093.png" alt="Marca 4">
-        </div>
-    </section>
-
-    <section>
-        <h2 class="lang-es">Lo que hago</h2>
-        <h2 class="lang-en">What I Do</h2>
-        <div class="dual">
-            <div class="package-box">
-                <h4 class="lang-es">Creación de Contenido (UGC)</h4>
-                <h4 class="lang-en">Content Creation (UGC)</h4>
-                <p class="lang-es">Videos y fotos en formato vertical que capturan la atención rápido. Perfectos para usar en las redes de tu negocio o en anuncios pagados.</p>
-                <p class="lang-en">High-converting vertical videos and photos optimized with strong hooks. Perfect for your brand's organic social platforms or paid ad campaigns.</p>
-            </div>
-            <div class="package-box">
-                <h4 class="lang-es">Reseñas y Experiencias</h4>
-                <h4 class="lang-en">Reviews & Experiences</h4>
-                <p class="lang-es">Visitas a tu alojamiento, restaurante, experiencia o marca con una cobertura completa. Subo videos dinámicos a mis redes y comparto todo el recorrido por mis Stories.</p>
-                <p class="lang-en">In-depth coverage of your stay, restaurant, experience, or brand. I create dynamic videos for my feed and share real-time experiences via daily Stories.</p>
+        <div class="block">
+            <div class="section-header" id="port-header">Video Portafolio (Edición)</div>
+            <div class="video-grid">
+                <a href="https://www.instagram.com/reel/DYf1qunx8bB/" class="video-btn" target="_blank" id="vid-1">► VER EJEMPLO: ALOJAMIENTO</a>
+                <a href="https://www.instagram.com/reel/DHZatNySXkC/" class="video-btn" target="_blank" id="vid-2">► VER EJEMPLO: ITINERARIO</a>
             </div>
         </div>
-        <p class="lang-es" style="font-size: 15px; color: #555; margin-top: 20px; font-style: italic;">
-            *Las colaboraciones se ajustan a los objetivos de cada campaña. Contáctame para diseñar una propuesta a la medida o solicitar mi tarifa privada.
-        </p>
-        <p class="lang-en" style="font-size: 15px; color: #555; margin-top: 20px; font-style: italic;">
-            *Collaborations are tailored to each campaign's specific goals. Contact me to design a custom proposal or to request my private rate card.
-        </p>
-    </section>
 
-    <footer>
-        <h2 class="lang-es">¡Vamos a crear algo súper chulo!</h2>
-        <h2 class="lang-en">Let's Create Something Amazing!</h2>
-        <p class="lang-es">Envíame un mensaje directo por WhatsApp para coordinar propuestas y colaboraciones.</p>
-        <p class="lang-en">Send me a direct message on WhatsApp to coordinate custom proposals and brand strategies.</p>
-        <a href="https://wa.me/17872395768?text=Hola%20Jenice!%20Vimos%20tu%20Media%20Kit%20y%20nos%20gustar%C3%ADa%20coordinar%20una%20colaboraci%C3%B3n." class="btn lang-es" target="_blank">Contactar por WhatsApp</a>
-        <a href="https://wa.me/17872395768?text=Hi%20Jenice!%20We%20saw%20your%20Media%20Kit%20and%20would%20love%20to%20discuss%20a%20collaboration." class="btn lang-en" target="_blank">Connect via WhatsApp</a>
-    </footer>
+        <div class="block">
+            <div class="section-header" id="why-title">¿Por qué colaborar conmigo?</div>
+            <div class="feature-card" id="feat1"><b>Viralidad Orgánica:</b> El 81% de mi alcance viene de personas que no me siguen, lo que significa que tu marca se expone a gente nueva constantemente.</div>
+            <div class="feature-card" id="feat2"><b>Storytelling que vende:</b> No solo saco fotos lindas; cuento la historia de tu lugar para que la gente sienta que NECESITA estar ahí.</div>
+        </div>
+
+        <div class="block">
+            <div class="section-header" id="enf-title">¿Cómo trabajamos?</div>
+            <div class="feature-card" id="enf-body">No me gusta el contenido genérico. Creo piezas "Plug & Play" (listas para tus redes y ads) con un enfoque narrativo que transforma un lugar en una experiencia aspiracional. Mi meta es que, después de ver mi contenido, el usuario sienta la urgencia de reservar.</div>
+        </div>
+
+        <div class="block">
+            <div class="section-header" id="gain-title">¿Qué gana su marca?</div>
+            <div class="feature-card" id="gain-body">Vas a tener material profesional de alta calidad que puedes usar por meses, el respaldo de una voz auténtica que genera mucha más confianza que un anuncio tradicional, y exposición directa a viajeros que están listos para gastar y disfrutar.</div>
+        </div>
+
+        <div class="brands-section">
+            <div id="brands-text" style="font-size: 11px; color: #888;">He tenido el gusto de colaborar con +300 marcas:</div>
+            <div class="brand-logos">
+                <img src="IMG_5686.png"><img src="IMG_6086.png"><img src="IMG_6088.png"><img src="IMG_6093.png">
+            </div>
+        </div>
+
+        <a href="mailto:jeniceresto.collabs@gmail.com" class="cta-btn" id="cta-btn">TRABAJEMOS JUNTOS</a>
+    </div>
 
     <script>
-        function changeLang(lang) {
-            document.body.className = 'lang-' + lang;
-            document.getElementById('btn-es').className = lang === 'es' ? 'active' : '';
-            document.getElementById('btn-en').className = lang === 'en' ? 'active' : '';
+        const t = {
+            es: { sub: "VIAJES • GASTRO • EXPERIENCIAS", audH: "¿Quiénes me siguen?", audB: "Tengo una comunidad muy real y activa (el 62% tiene entre 25 y 44 años). Aunque mi base fuerte está en Puerto Rico (70%), tengo un 22% de seguidores en EE.UU. y comunidades creciendo en LatAm. No solo busco números; busco que las marcas conecten con gente que realmente puede viajar y disfrutar de sus experiencias.", vH: "Video Portafolio (Edición)", v1: "► VER EJEMPLO: ALOJAMIENTO", v2: "► VER EJEMPLO: ITINERARIO", why: "¿Por qué colaborar conmigo?", f1: "<b>Viralidad Orgánica:</b> El 81% de mi alcance viene de personas que no me siguen, lo que significa que tu marca se expone a gente nueva constantemente.", f2: "<b>Storytelling que vende:</b> No solo saco fotos lindas; cuento la historia de tu lugar para que la gente sienta que NECESITA estar ahí.", enfH: "¿Cómo trabajamos?", enfB: "No me gusta el contenido genérico. Creo piezas 'Plug & Play' (listas para tus redes y ads) con un enfoque narrativo que transforma un lugar en una experiencia aspiracional. Mi meta es que, después de ver mi contenido, el usuario sienta la urgencia de reservar.", gainH: "¿Qué gana su marca?", gainB: "Vas a tener material profesional de alta calidad que puedes usar por meses, el respaldo de una voz auténtica que genera mucha más confianza que un anuncio tradicional, y exposición directa a viajeros que están listos para gastar y disfrutar.", br: "He tenido el gusto de colaborar con +300 marcas:", cta: "TRABAJEMOS JUNTOS" },
+            en: { sub: "TRAVEL • GASTRO • EXPERIENCES", audH: "Who follows me?", audB: "I have a real, active community (62% are 25-44). While Puerto Rico is my home base (70%), 22% of my followers are in the U.S., with growing communities in LatAm. I don't just care about numbers; I care about brands connecting with people who can actually travel and experience what you offer.", vH: "Video Portfolio (Editing)", v1: "► WATCH EXAMPLE: ACCOMMODATION", v2: "► WATCH EXAMPLE: ITINERARY", why: "Why work with me?", f1: "<b>Organic Virality:</b> 81% of my reach comes from non-followers, exposing your brand to new eyes constantly.", f2: "<b>Storytelling that sells:</b> I don't just take pretty pictures; I tell your story so people feel like they NEED to be there.", enfH: "How we work", enfB: "I don't do generic content. I create 'Plug & Play' pieces (ready for your social and ads) with a narrative focus that turns a place into an aspirational experience. My goal is for the user to feel the urgency to book after seeing my content.", gainH: "What does your brand gain?", gainB: "You'll get high-quality professional material to use for months, the backing of an authentic voice that builds more trust than a traditional ad, and direct exposure to travelers ready to spend and enjoy.", br: "I've had the pleasure of collaborating with 300+ brands:", cta: "LET'S WORK TOGETHER" }
+        };
+        function setLang(l) {
+            document.getElementById('subtitle').innerText = t[l].sub;
+            document.getElementById('aud-header').innerText = t[l].audH;
+            document.getElementById('aud-body').innerText = t[l].audB;
+            document.getElementById('port-header').innerText = t[l].vH;
+            document.getElementById('vid-1').innerText = t[l].v1;
+            document.getElementById('vid-2').innerText = t[l].v2;
+            document.getElementById('why-title').innerText = t[l].why;
+            document.getElementById('feat1').innerHTML = t[l].f1;
+            document.getElementById('feat2').innerHTML = t[l].f2;
+            document.getElementById('enf-title').innerText = t[l].enfH;
+            document.getElementById('enf-body').innerText = t[l].enfB;
+            document.getElementById('gain-title').innerText = t[l].gainH;
+            document.getElementById('gain-body').innerText = t[l].gainB;
+            document.getElementById('brands-text').innerText = t[l].br;
+            document.getElementById('cta-btn').innerText = t[l].cta;
         }
     </script>
 </body>
