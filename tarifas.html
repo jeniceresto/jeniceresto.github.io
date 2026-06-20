@@ -3,202 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jenice Resto | Tarifa y Paquetes</title>
+    <title>Jenice Resto | Tarifas y Paquetes</title>
     <style>
-        body { margin: 0; font-family: Arial, sans-serif; background: #ffffff; color: #222; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; color: #ffffff; background-color: #121212; }
         
-        .lang-switch { position: absolute; top: 20px; right: 20px; display: flex; gap: 5px; z-index: 10; }
-        .lang-switch button { background: white; border: 1px solid #ccc; padding: 6px 12px; font-weight: bold; cursor: pointer; border-radius: 4px; font-size: 14px; }
-        .lang-switch button.active { background: #0056b3; color: white; border-color: #0056b3; }
-        
-        header { background: #cfe8ff; padding: 50px 20px; text-align: center; position: relative; }
-        
-        /* Foto de perfil (Grande) y Logo (Pequeño) */
-        .profile-pic { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .brand-logo-small { max-width: 90px; height: auto; margin-top: 20px; object-fit: contain; }
-        
-        header h1 { font-size: 40px; margin: 0; color: #1a1a1a; }
-        header p { font-size: 18px; max-width: 700px; margin: 10px auto 0; color: #444; }
-        section { padding: 50px 20px; max-width: 900px; margin: auto; }
-        h2 { font-size: 32px; margin-bottom: 25px; color: #1a1a1a; border-bottom: 2px solid #cfe8ff; padding-bottom: 10px; }
-        .dual { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
-        .dual div { flex: 1; min-width: 280px; }
-        .stats-box { background: #f7f7f7; padding: 25px; border-radius: 8px; text-align: center; box-sizing: border-box; }
-        .stats-box h3 { font-size: 32px; color: #0056b3; margin: 0 0 10px 0; }
-        .destacado { background: #fff9e6; border-left: 4px solid #ffcc00; padding: 15px; margin-top: 20px; border-radius: 0 4px 4px 0; font-size: 15px; line-height: 1.6; }
-        .brand-intro { text-align: center; font-size: 18px; color: #444; margin-bottom: 30px; }
-        .brands-grid { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; align-items: center; margin-bottom: 40px; }
-        .brands-grid img { max-width: 130px; height: auto; object-fit: contain; }
-        
-        .grid-paquetes { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
-        .tarjeta-precio { background: #f7f7f7; border: 1px solid #e0e0e0; border-radius: 8px; padding: 25px; flex: 1; min-width: 260px; max-width: 400px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; }
-        .tarjeta-precio h3 { margin: 0 0 5px 0; font-size: 22px; color: #1a1a1a; }
-        .precio { font-size: 34px; font-weight: bold; color: #0056b3; margin: 15px 0; }
-        .tarjeta-precio p.desc { font-size: 14px; line-height: 1.5; margin: 0 0 20px 0; color: #555; }
-        .btn-contacto { display: block; text-align: center; background: #0056b3; color: white; padding: 12px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: auto; font-size: 15px; }
-        .btn-contacto:hover { background: #004494; }
-        .nota-adicional { background: #fff9e6; border-left: 4px solid #ffcc00; padding: 15px; margin-top: 40px; border-radius: 0 4px 4px 0; font-size: 15px; }
-        .nota-adicional ul { margin: 5px 0 0 0; padding-left: 20px; }
-        footer { text-align: center; padding: 50px 20px; background: #f1f1f1; color: #222; }
+        /* Hero Section */
+        .hero { position: relative; height: 40vh; width: 100%; background: linear-gradient(rgba(0,0,0,0.6), rgba(18,18,18,1)), url('IMG_6476.jpeg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
+        .hero h1 { font-size: 32px; letter-spacing: 2px; text-transform: uppercase; margin: 0; color: #fff; }
+        .hero p { font-size: 14px; letter-spacing: 3px; color: #d4af37; margin-top: 10px; text-transform: uppercase; }
 
-        body.lang-en .lang-es { display: none !important; }
-        body.lang-es .lang-en { display: none !important; }
+        .content { max-width: 600px; margin: 0 auto; padding: 40px 20px; }
+
+        .section-title { font-size: 22px; font-weight: 800; text-align: center; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Checklist de lo que ofreces */
+        .offer-list { margin-bottom: 50px; background: #1a1a1a; padding: 25px; border-radius: 15px; border: 1px solid #333; }
+        .offer-item { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 14px; color: #ccc; }
+        .offer-item span { color: #d4af37; font-weight: bold; }
+
+        /* Tarjetas de Precios */
+        .package-card { background: #1a1a1a; border: 1px solid #333; padding: 30px; border-radius: 15px; margin-bottom: 25px; transition: transform 0.3s; }
+        .package-card:hover { transform: translateY(-5px); border-color: #555; }
+        
+        .pkg-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 15px; }
+        .pkg-title { font-size: 20px; font-weight: 800; margin: 0; }
+        .pkg-price { font-size: 24px; font-weight: bold; color: #d4af37; margin: 0; }
+        
+        .pkg-desc { font-size: 14px; color: #aaa; line-height: 1.6; margin-bottom: 20px; }
+        
+        .pkg-btn { display: block; background: #222; color: #fff; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: bold; border: 1px solid #444; transition: 0.3s; }
+        .pkg-btn:hover { background: #d4af37; color: #121212; border-color: #d4af37; }
+
+        /* Paquete Recomendado (Destacado) */
+        .card-featured { border: 2px solid #d4af37; position: relative; }
+        .badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #d4af37; color: #121212; padding: 5px 15px; font-size: 10px; font-weight: 800; text-transform: uppercase; border-radius: 20px; letter-spacing: 1px; }
+        .card-featured .pkg-btn { background: #d4af37; color: #121212; border: none; }
+        .card-featured .pkg-btn:hover { background: #fff; }
+
+        /* Notas finales */
+        .notes { margin-top: 40px; font-size: 11px; color: #666; text-align: center; line-height: 1.5; }
     </style>
 </head>
-<body class="lang-es">
+<body>
 
-    <div class="lang-switch">
-        <button id="btn-es" class="active" onclick="changeLang('es')">ES</button>
-        <button id="btn-en" onclick="changeLang('en')">EN</button>
+    <div class="hero">
+        <h1>Servicios & Tarifas</h1>
+        <p>Inversión para tu marca</p>
     </div>
 
-    <header>
-        <img src="IMG_8980.jpeg" alt="Jenice Resto" class="profile-pic">
-        <h1 class="lang-es">Tarifa y Colaboraciones</h1>
-        <h1 class="lang-en">Rates & Collaborations</h1>
-        <p class="lang-es">Jenice Resto | Viajes, Alojamientos, Restaurantes, Experiencias, Marcas y más</p>
-        <p class="lang-en">Jenice Resto | Travel, Stays, Restaurants, Experiences, Brands & more</p>
-        <img src="IMG_5775.png" alt="Logo Jenice Resto" class="brand-logo-small">
-    </header>
+    <div class="content">
 
-    <section>
-        <h2 class="lang-es">Sobre Mí</h2>
-        <h2 class="lang-en">About Me</h2>
-        <p class="lang-es" style="font-size: 16px; line-height: 1.6; color: #333;">
-            ¡Hola! Me dedico a explorar y compartir lo mejor en viajes, estadías, gastronomía, marcas y aventuras locales. Mi objetivo es conectar a mi comunidad con experiencias reales y espacios increíbles, creando contenido visualmente estético y dinámico que resalte la esencia única de cada proyecto.
-        </p>
-        <p class="lang-en" style="font-size: 16px; line-height: 1.6; color: #333;">
-            Hi! I specialize in exploring and sharing the best in travel, stays, gastronomy, brands, and local adventures. My goal is to connect my community with authentic experiences and incredible spaces, creating visually aesthetic and dynamic content that highlights the unique essence of each project.
-        </p>
-    </section>
-
-    <section>
-        <h2 class="lang-es">Mi Comunidad e Impacto</h2>
-        <h2 class="lang-en">My Community & Impact</h2>
-        <div class="dual">
-            <div class="stats-box">
-                <h3>25K</h3>
-                <p style="margin: 0; font-weight: bold;">Instagram</p>
-            </div>
-            <div class="stats-box">
-                <h3>22K</h3>
-                <p style="margin: 0; font-weight: bold;">TikTok</p>
-            </div>
-            <div class="stats-box" style="background: #e6f2ff; border: 1px solid #cfe8ff;">
-                <h3 style="color: #004494;">500K</h3>
-                <p class="lang-es" style="margin: 0; font-weight: bold; color: #004494;">Cuentas Alcanzadas</p>
-                <p class="lang-en" style="margin: 0; font-weight: bold; color: #004494;">Monthly Reach</p>
-            </div>
-        </div>
-        <div class="destacado lang-es">
-            <strong>¿Quiénes me ven?</strong> 
-            <p style="margin: 5px 0 0 0;">Una audiencia sumamente activa compuesta en su mayoría por usuarios entre los <strong>25 a 44 años</strong> (hombres 61%, mujeres 39%). El <strong>71% de mi público es de Puerto Rico</strong>, seguido por un 22% de Estados Unidos, lo que me permite un impacto directo en el mercado local y el turismo interno.</p>
-        </div>
-        <div class="destacado lang-en">
-            <strong>Audience Demographics</strong> 
-            <p style="margin: 5px 0 0 0;">A highly active audience primarily composed of users between <strong>25 and 44 years old</strong> (61% men, 39% women). <strong>71% of my audience is located in Puerto Rico</strong>, followed by 22% in the United States, driving direct engagement in local markets and internal tourism.</p>
-        </div>
-    </section>
-
-    <section>
-        <h2 class="lang-es">Marcas con las que he trabajado</h2>
-        <h2 class="lang-en">Brands I've Worked With</h2>
-        <div class="brands-grid">
-            <img src="IMG_5686.png" alt="Marca 1">
-            <img src="IMG_6086.png" alt="Marca 2">
-            <img src="IMG_6088.png" alt="Marca 3">
-            <img src="IMG_6093.png" alt="Marca 4">
-        </div>
-    </section>
-
-    <section>
-        <h2 class="lang-es">Mis Paquetes</h2>
-        <h2 class="lang-en">Rates & Packages</h2>
-        
-        <div class="grid-paquetes">
-            
-            <div class="tarjeta-precio">
-                <div>
-                    <h3>Instagram Post</h3>
-                    <p class="lang-es" style="color: #666; font-size: 13px; margin: 0;">(10 fotos)</p>
-                    <p class="lang-en" style="color: #666; font-size: 13px; margin: 0;">(10 photos)</p>
-                    <div class="precio">$200</div>
-                    <p class="desc lang-es">Secuencia de hasta 10 fotos estéticas en formato carrusel publicado en mi perfil, con copy y hashtags totalmente optimizados.</p>
-                    <p class="desc lang-en">A completely optimized carousel post featuring up to 10 high-quality photos on my feed, with targeted copywriting and hashtags.</p>
-                </div>
-                <a href="https://wa.me/17872395768?text=Hola%20Jenice!%20Me%20interesa%20el%20paquete%20de%20Instagram%20Post%20(%24200)" class="btn-contacto lang-es" target="_blank">Me interesa este</a>
-                <a href="https://wa.me/17872395768?text=Hi%20Jenice!%20I'm%20interested%20in%20the%20Instagram%20Post%20package%20(%24200)" class="btn-contacto lang-en" target="_blank">Inquire Package</a>
-            </div>
-
-            <div class="tarjeta-precio">
-                <div>
-                    <h3>Instagram Reel + TikTok</h3>
-                    <p class="lang-es" style="color: #666; font-size: 13px; margin: 0;">(Video Vertical)</p>
-                    <p class="lang-en" style="color: #666; font-size: 13px; margin: 0;">(Vertical Video)</p>
-                    <div class="precio">$350</div>
-                    <p class="desc lang-es">Creación de un video vertical de alta calidad, editado con transiciones dinámicas, música en tendencia y publicado en ambas plataformas.</p>
-                    <p class="desc lang-en">High-quality dynamic vertical short-form video produced and cross-posted to both feeds, featuring trending audio and transitions.</p>
-                </div>
-                <a href="https://wa.me/17872395768?text=Hola%20Jenice!%20Me%20interesa%20el%20paquete%20de%20Reel%20%2B%20TikTok%20(%24350)" class="btn-contacto lang-es" target="_blank">Me interesa este</a>
-                <a href="https://wa.me/17872395768?text=Hi%20Jenice!%20I'm%20interested%20in%20the%20Reel%20%2B%20TikTok%20package%20(%24350)" class="btn-contacto lang-en" target="_blank">Inquire Package</a>
-            </div>
-
-            <div class="tarjeta-precio" style="border-color: #0056b3; background: #fdfeff;">
-                <div>
-                    <h3>Paquete Completo</h3>
-                    <p class="lang-es" style="color: #0056b3; font-size: 13px; margin: 0; font-weight: bold;">Recomendado</p>
-                    <p class="lang-en" style="color: #0056b3; font-size: 13px; margin: 0; font-weight: bold;">Most Popular</p>
-                    <div class="precio">$450</div>
-                    <p class="desc lang-es">Cobertura integral de tu marca o espacio. Incluye secuencia de Stories en tiempo real, fotos fijas/carrusel y la publicación de un Reel dedicado.</p>
-                    <p class="desc lang-en">Full end-to-end brand campaign coverage. Includes a real-time sequential Story run, static carousel posts, and a dedicated Reel.</p>
-                </div>
-                <a href="https://wa.me/17872395768?text=Hola%20Jenice!%20Me%20interesa%20el%20Paquete%20Completo%20(%24450)" class="btn-contacto lang-es" target="_blank">Me interesa este</a>
-                <a href="https://wa.me/17872395768?text=Hi%20Jenice!%20I'm%20interested%20in%20the%20Full%20Package%20(%24450)" class="btn-contacto lang-en" target="_blank">Inquire Package</a>
-            </div>
-
-            <div class="tarjeta-precio">
-                <div>
-                    <h3>On-Camera Talent</h3>
-                    <p class="lang-es" style="color: #666; font-size: 13px; margin: 0;">(Sin publicación)</p>
-                    <p class="lang-en" style="color: #666; font-size: 13px; margin: 0;">(Content Rights Only)</p>
-                    <div class="precio">$250</div>
-                    <p class="desc lang-es">Colaboración profesional como talento y presentadora en cámara para grabaciones, producciones propias o eventos de tu marca. (Hasta 3 horas).</p>
-                    <p class="desc lang-en">Professional on-camera hosting and commercial content talent for your brand's owned channels or private media events. (Up to 3 hours).</p>
-                </div>
-                <a href="https://wa.me/17872395768?text=Hola%20Jenice!%20Me%20interesa%20el%20paquete%20de%20On-Camera%20Talent%20(%24250)" class="btn-contacto lang-es" target="_blank">Me interesa este</a>
-                <a href="https://wa.me/17872395768?text=Hi%20Jenice!%20I'm%20interested%20in%20the%20On-Camera%20Talent%20package%20(%24250)" class="btn-contacto lang-en" target="_blank">Inquire Package</a>
-            </div>
-
+        <div class="offer-list">
+            <h3 style="margin-top:0; font-size: 16px; margin-bottom: 20px; text-align:center;">LO QUE INCLUYE MI TRABAJO</h3>
+            <div class="offer-item"><span>✓</span> Contenido en alta resolución (4K/HD)</div>
+            <div class="offer-item"><span>✓</span> Edición dinámica con música en tendencia</div>
+            <div class="offer-item"><span>✓</span> Copywriting estratégico y hashtags optimizados</div>
+            <div class="offer-item"><span>✓</span> Storytelling diseñado para generar conversiones</div>
+            <div class="offer-item"><span>✓</span> Publicación en Instagram y TikTok (según paquete)</div>
         </div>
 
-        <div class="nota-adicional lang-es">
-            <strong>Detallitos a tener en cuenta:</strong>
-            <ul>
-                <li>Si la visita es fuera del área metro, cuadramos los gastos de transportación o estadía aparte.</li>
-                <li>Pido el 50% de depósito para separar la fecha de la visita o grabación en el calendario.</li>
-                <li>Si tu marca requiere exclusividad extendida o derechos de uso comercial prolongados para pauta publicitaria, ajustamos los términos en la propuesta final.</li>
-            </ul>
-        </div>
-        <div class="nota-adicional lang-en">
-            <strong>Terms & Guidelines:</strong>
-            <ul>
-                <li>Travel and lodging costs for productions located outside the metropolitan area will be quoted separately.</li>
-                <li>A 50% deposit is required to reserve production and content calendar dates.</li>
-                <li>Extended commercial usage rights for paid ad amplification or brand category exclusivity can be bundled upon proposal review.</li>
-            </ul>
-        </div>
-    </section>
+        <div class="section-title">Paquetes de Contenido</div>
 
-    <footer>
-        <p>&copy; 2026 Jenice Resto. All rights reserved.</p>
-    </footer>
+        <div class="package-card">
+            <div class="pkg-header">
+                <h3 class="pkg-title">Instagram Post</h3>
+                <p class="pkg-price">$200</p>
+            </div>
+            <p class="pkg-desc">Secuencia de hasta 10 fotos estéticas en formato carrusel publicado en mi perfil, con copy y hashtags totalmente optimizados.</p>
+            <a href="mailto:jeniceresto.collabs@gmail.com?subject=Interés en Paquete: Instagram Post ($200)" class="pkg-btn">Me interesa este</a>
+        </div>
 
-    <script>
-        function changeLang(lang) {
-            document.body.className = 'lang-' + lang;
-            document.getElementById('btn-es').className = lang === 'es' ? 'active' : '';
-            document.getElementById('btn-en').className = lang === 'en' ? 'active' : '';
-        }
-    </script>
+        <div class="package-card">
+            <div class="pkg-header">
+                <h3 class="pkg-title">Reel + TikTok</h3>
+                <p class="pkg-price">$350</p>
+            </div>
+            <p class="pkg-desc">Creación de un video vertical de alta calidad, editado con transiciones dinámicas, música en tendencia y publicado en ambas plataformas.</p>
+            <a href="mailto:jeniceresto.collabs@gmail.com?subject=Interés en Paquete: Reel + TikTok ($350)" class="pkg-btn">Me interesa este</a>
+        </div>
+
+        <div class="package-card card-featured">
+            <div class="badge">Recomendado</div>
+            <div class="pkg-header">
+                <h3 class="pkg-title">Paquete Completo</h3>
+                <p class="pkg-price">$450</p>
+            </div>
+            <p class="pkg-desc">Cobertura integral de tu marca o espacio. Incluye secuencia de Stories en tiempo real, fotos fijas/carrusel y la publicación de un Reel dedicado.</p>
+            <a href="mailto:jeniceresto.collabs@gmail.com?subject=Interés en Paquete Completo ($450)" class="pkg-btn">Me interesa este</a>
+        </div>
+
+        <div class="notes">
+            * Estas tarifas son para publicación en mis plataformas y uso orgánico por parte de la marca.<br>
+            * Para obtener los derechos de uso comercial (correr Ads con mi rostro/voz) o contenido exclusivo tipo UGC, aplican tarifas adicionales.<br>
+            * Gastos de viaje, hospedaje o viáticos (de ser necesarios) se cotizan por separado.
+        </div>
+
+    </div>
+
 </body>
 </html>
